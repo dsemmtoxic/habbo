@@ -1,0 +1,1 @@
+PASS: actual style-button bridge opens a centered, bounded modal in six viewports. All89 supplied choices are reachable with vertical scroll and current style highlighted; selecting current/another style or X closes, preserves artwork proportions and uses native style selection.

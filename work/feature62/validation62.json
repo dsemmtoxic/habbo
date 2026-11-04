@@ -1,0 +1,49 @@
+{
+  "checkpoint": 62,
+  "base": 33,
+  "route": "token only",
+  "checks": [
+    {
+      "check": "VerifyAppearance62",
+      "log": "work/feature62/VerifyAppearance62.log",
+      "sha256": "31eb37f678560bb3a68beb085d4d5e01398d595fd7f2a16c3bb1645e959e1e63"
+    },
+    {
+      "check": "VerifyLogin62",
+      "log": "work/feature62/VerifyLogin62.log",
+      "sha256": "14469d50af571284210c9bfdb65d5d3148380d723370e743570bb1a6ac168398"
+    },
+    {
+      "check": "AuditToken62",
+      "log": "work/feature62/AuditToken62.log",
+      "sha256": "196dd51751730316a225f00ddb5a26b7f9c5feaaf943f0b28e3e6f6befaa031a"
+    },
+    {
+      "check": "VerifyConsole62",
+      "log": "work/feature62/VerifyConsole62.log",
+      "sha256": "ba3ea7d15792cbf96c6fcb09ae30069ac5ea77ecb2de5191c26ccc99a694aefa"
+    },
+    {
+      "check": "VerifyRetained33",
+      "log": "work/feature62/VerifyRetained33.log",
+      "sha256": "07ba51c0fd72a7dd889e87af31272b9c4d8cf2872bca206fe4670de297ea1441"
+    },
+    {
+      "check": "VerifyColorBindings61",
+      "log": "work/feature62/VerifyColorBindings61.log",
+      "sha256": "98af403f23b8a28e077b2be27db358b945ecc63333eba14aa2a44584f3f00635"
+    }
+  ],
+  "swfSha256": "1821987ac87dfa5d9948ee5316b0f2ab270ec04630017a18a1f4db9130748585",
+  "base33SwfSha256": "de8dd00c53bd9ece24563558ce7a19ad6183e94bad2ec651c06fd20f46d3e901",
+  "nativeClasses": 2760,
+  "automaticLoginCallbackPresent": false,
+  "physicalAndroidTested": false,
+  "boundaries": [
+    "Android/GPU",
+    "Flash event delivery",
+    "Feathers measurement/rasterization",
+    "live hotel/network",
+    "device clock/timer primitives"
+  ]
+}

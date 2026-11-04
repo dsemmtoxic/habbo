@@ -1,0 +1,113 @@
+{
+  "checkpoint": 68,
+  "base": 33,
+  "route": "official-site browser session or manual launcher token",
+  "checks": [
+    {
+      "check": "audit",
+      "log": "work/feature68/test-audit.log",
+      "sha256": "ee1572c250b5f773123fc77df544e4a2a9e8aedef45b22229a1635f9269a03c3"
+    },
+    {
+      "check": "browser-script",
+      "log": "work/feature68/test-browser-script.log",
+      "sha256": "8e03a4a3beb76232493eede5fd84fabe01dc0c2e4972ca6de606493d87046a65"
+    },
+    {
+      "check": "colorBindings",
+      "log": "work/feature68/test-colorBindings.log",
+      "sha256": "98af403f23b8a28e077b2be27db358b945ecc63333eba14aa2a44584f3f00635"
+    },
+    {
+      "check": "console",
+      "log": "work/feature68/test-console.log",
+      "sha256": "5c550eebdf1c507a660bd25c929bc782046aaf8ad3645f4cd42339d1908650b7"
+    },
+    {
+      "check": "entrance-sorting",
+      "log": "work/feature68/test-entrance-sorting.log",
+      "sha256": "62819af203d0384b078ffc0a2c853da1f45ec80b8b052e9ad097d5f5e6c7884f"
+    },
+    {
+      "check": "lighting",
+      "log": "work/feature68/test-lighting.log",
+      "sha256": "d6859df14316b2552314d034549e0803988e2928946b8b17065a14f36ab6121b"
+    },
+    {
+      "check": "localization",
+      "log": "work/feature68/test-localization.log",
+      "sha256": "266ec62759fce9960e42fe83ac0bf3ff6cd2168fe7e54815eebc7febb6afc330"
+    },
+    {
+      "check": "login",
+      "log": "work/feature68/test-login.log",
+      "sha256": "75cdc2236c61341701e5ef730e60c576a2a91e9056993e730663cdd7797f6f76"
+    },
+    {
+      "check": "logout",
+      "log": "work/feature68/test-logout.log",
+      "sha256": "268fe6b4d28f4ee3f7b3a4cc9712f6be6c12d36f52c72e2b2c98d862cb88a0f7"
+    },
+    {
+      "check": "market",
+      "log": "work/feature68/test-market.log",
+      "sha256": "ce7c2dcc19f29b1d62e749a435f26e919ed711bc25fc2d4d2e1d0f602badcb5c"
+    },
+    {
+      "check": "mask",
+      "log": "work/feature68/test-mask.log",
+      "sha256": "a6e8b9cf6f27dfe07026cfc44471a90fe536b87425f23a37af7da7c5f33ead97"
+    },
+    {
+      "check": "mesh",
+      "log": "work/feature68/test-mesh.log",
+      "sha256": "0a8c863d4dafc10f5de6ca83e053c02ae6753d3f70121f59441fd78aad63652c"
+    },
+    {
+      "check": "native-2760-class-roundtrip",
+      "log": "work/feature65/test-native.log",
+      "sha256": "d46f50a8480958b208936a1f83f5fadc99426640d1eea60bc5082f67f154f0a5"
+    },
+    {
+      "check": "navigator",
+      "log": "work/feature68/test-navigator.log",
+      "sha256": "fa95892382ee0e693bd343bb09362abbe7e56bc70bca04617b93889e04f4680c"
+    },
+    {
+      "check": "promotions",
+      "log": "work/feature68/test-promotions.log",
+      "sha256": "ca50d9a47d1ec04144646b3883278f8b55a3c6df30560f9200e2283c6ec90740"
+    },
+    {
+      "check": "render",
+      "log": "work/feature68/test-render.log",
+      "sha256": "e99d5f6af05694f111de3d9ef5e490620bf83a3fc5ea25a5e25ef46b245e4fff"
+    },
+    {
+      "check": "retained33",
+      "log": "work/feature68/test-retained33.log",
+      "sha256": "07ba51c0fd72a7dd889e87af31272b9c4d8cf2872bca206fe4670de297ea1441"
+    },
+    {
+      "check": "settings",
+      "log": "work/feature68/test-settings.log",
+      "sha256": "385bc8cd0d68b4806465b90d27a2e8dae93d4f36d1033b0be5f8366e8fdf2ff8"
+    },
+    {
+      "check": "startup-types",
+      "log": "work/feature68/test-startup-types.log",
+      "sha256": "07118a465aca218713a35a806511816c425f76618c9fb4bd554a53d14beebbd4"
+    }
+  ],
+  "swfSha256": "6409f5b8b147bc662206d9d23df2d09d9ea44c637cd9a6e3aaa177818a4eb92f",
+  "nativeDexSha256": "64da4daf9ad0434f8ec0a1f09a49af392ef4f2f1bfc32733dbd3ca2540c41d15",
+  "physicalAndroidTested": false,
+  "liveHotelTested": false,
+  "boundaries": [
+    "Android/GPU/stencil rasterization",
+    "Feathers font/layout measurement",
+    "operating-system event delivery",
+    "live hotel transactions and room-event timing",
+    "real signed-in browser session and cookie persistence"
+  ]
+}

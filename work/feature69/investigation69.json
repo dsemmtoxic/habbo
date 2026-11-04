@@ -1,0 +1,58 @@
+{
+  "checkpoint": 69,
+  "base": 33,
+  "request": "event row, active own offers, reference lighting, measured ping and deliberate avatar click",
+  "reference": {
+    "file": "work/plus.swf",
+    "sha256": "d9672557cde96b0f8b50f9408946777e872b28d39b398d07531d119c2821f8ff",
+    "lighting": {
+      "layoutAsset": "room_view_container_xml",
+      "order": [
+        "background_wrapper",
+        "room_canvas_wrapper",
+        "colorizer_wrapper"
+      ],
+      "overlayBlendMode": "multiply",
+      "sourceClass": "com.sulake.habbo.ui:RoomDesktop",
+      "result": "Whole-room dimmer also tints Toner backdrop. Existing lighting retained."
+    },
+    "userClick": {
+      "sourceClass": "com.sulake.habbo.room:RoomObjectEventHandler",
+      "method": "clickRoomObject",
+      "composer": "com.sulake.habbo.communication.messages.outgoing.room:ClickCharacterComposer",
+      "header": 2515,
+      "payload": [
+        "room avatar index int"
+      ],
+      "activation": "sent only by explicit Clicar menu action"
+    },
+    "latency": {
+      "request": "LatencyPingRequestMessageComposer",
+      "requestHeader": 2748,
+      "response": "LatencyPingResponseMessageEvent",
+      "responseHeader": 512,
+      "payload": [
+        "request id int"
+      ],
+      "timing": "getTimer response minus request; no cached/fabricated measurement"
+    }
+  },
+  "compatibility": {
+    "nativeDexSha256": "64da4daf9ad0434f8ec0a1f09a49af392ef4f2f1bfc32733dbd3ca2540c41d15",
+    "browserScriptSha256": "0fbccfff1a63514b62d6f2f9c686a47d3110f8bac1dd7dd0dae662a6522cf225",
+    "before68SwfSha256": "6409f5b8b147bc662206d9d23df2d09d9ea44c637cd9a6e3aaa177818a4eb92f"
+  },
+  "ownSales": {
+    "visible": "status 1 with a nonnegative reported deadline; zero minutes retains the native last minute",
+    "expired": "excluded from category and displayed count; no automatic withdrawal or redemption",
+    "retirar": "native cancel 92 with acknowledged server result1704",
+    "balance": "preserved"
+  },
+  "physicalAndroidTested": false,
+  "liveHotelTested": false,
+  "avatarGestures": {
+    "singleTap": "ignore avatar category before selection/LookTo",
+    "longPress": "native selection in both walking/interaction gesture preferences",
+    "furniture": "existing gesture routes retained"
+  }
+}

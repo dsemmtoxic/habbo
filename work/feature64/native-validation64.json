@@ -1,0 +1,10 @@
+{
+  "mainDexClasses": 2760,
+  "roundTripAllClasses": true,
+  "changedOriginalMethods": [
+    "public constructor <init>()V",
+    "public destroyInternals()V"
+  ],
+  "sha256": "78baf08bcc9717b19ade48717b01d011712e900b21bc798615ff4936501f4021",
+  "otherDexFiles": "packager retains original bytes"
+}

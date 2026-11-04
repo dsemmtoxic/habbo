@@ -1,0 +1,3 @@
+PASS: Real AirPlus history schema/request parity, pre-login sent/received messages, live/history ID deduplication, cursor pagination, empty termination, unread-state preservation and stable scroll position.
+PASS: actual history reader/cursors fill a short viewport, cap prefetch to2, forbid overlap, terminate on empty page, retry initial timeout once, release timers on close/reset; original sender/dedup/unread/scroll/schema regression passed.
+PASS: reproduced66 clock over the bubble tail. Sent/received clocks now sit below body text and above the native bottom inset, scale with message font, align right, and exceed4.5:1 against sampled screenshot backgrounds. Stable text/time, day badges, recycling and pagination preserved.

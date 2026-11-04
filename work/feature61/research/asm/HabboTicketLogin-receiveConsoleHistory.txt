@@ -1,0 +1,488 @@
+
+
+code
+   getlocal0
+   pushscope
+   debug 1, "data", 0, 0
+   debug 1, "+$activation", 1, 0
+   newactivation
+   dup
+   setlocal2
+   pushscope
+   getscopeobject 1
+   getlocal1
+   coerce QName(PackageNamespace(""),"Object")
+   setslot 1
+   getscopeobject 1
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-0u0"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   kill 3
+   convert_i
+   setslot 2
+   getscopeobject 1
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-0u0"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   kill 3
+   convert_i
+   setslot 3
+   getscopeobject 1
+   getslot 3
+   pushbyte 0
+   lessthan
+   dup
+   iftrue ofs005a
+   pop
+   getscopeobject 1
+   getslot 3
+   pushshort 5000
+   greaterthan
+ofs005a:
+   iffalse ofs0068
+   findpropstrict QName(PackageNamespace(""),"ArgumentError")
+   pushstring "Histórico de console inválido"
+   constructprop QName(PackageNamespace(""),"ArgumentError"), 1
+   throw
+ofs0068:
+   getscopeobject 1
+   newarray 0
+   coerce QName(PackageNamespace(""),"Array")
+   setslot 4
+   getscopeobject 1
+   pushbyte 0
+   setslot 5
+   jump ofs010f
+ofs007a:
+   label
+   getscopeobject 1
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-0u0"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   kill 3
+   convert_i
+   setslot 6
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-nr"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   pop
+   kill 3
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-nr"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   pop
+   kill 3
+   getscopeobject 1
+   getslot 4
+   pushstring "sender"
+   getscopeobject 1
+   getslot 6
+   pushstring "text"
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-nr"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   kill 3
+   pushstring "seconds"
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-0u0"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   kill 3
+   pushstring "id"
+   getscopeobject 1
+   getslot 1
+   dup
+   setlocal3
+   pushstring "_-nr"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   call 0
+   kill 3
+   newobject 4
+   callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+   getscopeobject 1
+   getscopeobject 1
+   getslot 5
+   increment_i
+   setslot 5
+ofs010f:
+   getscopeobject 1
+   getslot 5
+   getscopeobject 1
+   getslot 3
+   iflt ofs007a
+   getscopeobject 1
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleHistories")
+   getscopeobject 1
+   getslot 2
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   coerce QName(PackageNamespace(""),"Object")
+   setslot 7
+   getscopeobject 1
+   getslot 7
+   pushnull
+   ifne ofs0137
+   returnvoid
+ofs0137:
+   getscopeobject 1
+   getslot 7
+   pushfalse
+   setproperty Multiname("pending",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getscopeobject 1
+   getslot 7
+   getproperty Multiname("loaded",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   not
+   convert_b
+   setslot 8
+   getscopeobject 1
+   getslot 7
+   pushtrue
+   setproperty Multiname("loaded",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 3
+   pushbyte 0
+   ifne ofs016b
+   getscopeobject 1
+   getslot 7
+   pushfalse
+   setproperty Multiname("more",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   returnvoid
+ofs016b:
+   getscopeobject 1
+   getscopeobject 1
+   getslot 4
+   pushbyte 0
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getproperty Multiname("id",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_s
+   coerce_s
+   setslot 9
+   getscopeobject 1
+   getslot 7
+   getscopeobject 1
+   getslot 9
+   pushstring ""
+   equals
+   not
+   coerce_a
+   dup
+   convert_b
+   iffalse ofs01a3
+   pop
+   getscopeobject 1
+   getslot 9
+   getscopeobject 1
+   getslot 7
+   getproperty Multiname("requested",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_s
+   equals
+   not
+   coerce_a
+ofs01a3:
+   setproperty Multiname("more",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 7
+   getscopeobject 1
+   getslot 9
+   setproperty Multiname("cursor",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   newarray 0
+   coerce QName(PackageNamespace(""),"Array")
+   setslot 10
+   getscopeobject 1
+   findpropstrict QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"klass")
+   pushstring "_-20o::_-2uW"
+   callproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"klass"), 1
+   coerce QName(PackageNamespace(""),"Class")
+   setslot 11
+   pushbyte 0
+   setlocal3
+   getscopeobject 1
+   getslot 4
+   coerce_a
+   setlocal 4
+   jump ofs0298
+ofs01de:
+   label
+   getscopeobject 1
+   getlocal 4
+   getlocal3
+   nextvalue
+   coerce QName(PackageNamespace(""),"Object")
+   setslot 12
+   getscopeobject 1
+   getscopeobject 1
+   getslot 12
+   getproperty Multiname("id",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_s
+   coerce_s
+   setslot 13
+   getscopeobject 1
+   getslot 13
+   pushstring ""
+   equals
+   not
+   dup
+   iffalse ofs0227
+   pop
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleHistoryIds")
+   getscopeobject 1
+   getslot 13
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   pushtrue
+   strictequals
+   dup
+   iftrue ofs0227
+   pop
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleLiveIds")
+   getscopeobject 1
+   getslot 13
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   pushtrue
+   strictequals
+ofs0227:
+   iffalse ofs022f
+   jump ofs0298
+ofs022f:
+   getscopeobject 1
+   getslot 13
+   pushstring ""
+   ifeq ofs0257
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleHistoryIds")
+   getscopeobject 1
+   getslot 13
+   pushtrue
+   setproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 7
+   getproperty Multiname("ids",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 13
+   callpropvoid Multiname("push",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")]), 1
+ofs0257:
+   getscopeobject 1
+   getslot 10
+   getscopeobject 1
+   getslot 11
+   getscopeobject 1
+   getslot 12
+   getproperty Multiname("sender",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_i
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleOwnId")
+   ifne ofs0276
+   pushbyte 1
+   jump ofs0278
+ofs0276:
+   pushbyte 2
+ofs0278:
+   getscopeobject 1
+   getslot 12
+   getproperty Multiname("sender",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_i
+   getscopeobject 1
+   getslot 12
+   getproperty Multiname("text",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_s
+   getscopeobject 1
+   getslot 12
+   getproperty Multiname("seconds",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_i
+   construct 4
+   callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+ofs0298:
+   hasnext2 4, 3
+   iftrue ofs01de
+   kill 4
+   kill 3
+   getscopeobject 1
+   getslot 10
+   getproperty QName(PackageNamespace(""),"length")
+   pushbyte 0
+   ifne ofs02b2
+   returnvoid
+ofs02b2:
+   getscopeobject 1
+   getscopeobject 1
+   getslot 7
+   getproperty Multiname("conversation",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getproperty Multiname("messages",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   coerce QName(PackageNamespace(""),"Object")
+   setslot 14
+   getscopeobject 1
+   getscopeobject 1
+   getslot 7
+   getproperty Multiname("list",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   coerce QName(PackageNamespace(""),"Object")
+   setslot 15
+   getscopeobject 1
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleViews")
+   getscopeobject 1
+   getslot 15
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 7
+   strictequals
+   convert_b
+   dup
+   iffalse ofs02fa
+   pop
+   getscopeobject 1
+   getslot 15
+   getproperty Multiname("dataProvider",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 14
+   strictequals
+   convert_b
+ofs02fa:
+   convert_b
+   setslot 16
+   getscopeobject 1
+   getscopeobject 1
+   getslot 16
+   iffalse ofs0314
+   getscopeobject 1
+   getslot 15
+   getproperty Multiname("maxVerticalScrollPosition",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_d
+   jump ofs0316
+ofs0314:
+   pushbyte 0
+ofs0316:
+   convert_d
+   setslot 17
+   getscopeobject 1
+   getscopeobject 1
+   getslot 16
+   iffalse ofs0330
+   getscopeobject 1
+   getslot 15
+   getproperty Multiname("verticalScrollPosition",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_d
+   jump ofs0332
+ofs0330:
+   pushbyte 0
+ofs0332:
+   convert_d
+   setslot 18
+   findproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_insertingConsoleHistory")
+   pushtrue
+   setproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_insertingConsoleHistory")
+   getscopeobject 1
+   getslot 14
+   getscopeobject 1
+   getslot 10
+   getscopeobject 1
+   getslot 14
+   getproperty Multiname("data",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"concat"), 1
+   setproperty Multiname("data",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getscopeobject 1
+   getslot 16
+   iffalse ofs039d
+   getscopeobject 1
+   getslot 15
+   callpropvoid Multiname("validate",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")]), 0
+   getscopeobject 1
+   getslot 15
+   getscopeobject 1
+   getslot 8
+   iffalse ofs037f
+   getscopeobject 1
+   getslot 15
+   getproperty Multiname("maxVerticalScrollPosition",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   jump ofs0399
+ofs037f:
+   getlex QName(PackageNamespace(""),"Math")
+   pushbyte 0
+   getscopeobject 1
+   getslot 18
+   getscopeobject 1
+   getslot 15
+   getproperty Multiname("maxVerticalScrollPosition",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   add
+   getscopeobject 1
+   getslot 17
+   subtract
+   callproperty QName(PackageNamespace(""),"max"), 2
+ofs0399:
+   setproperty Multiname("verticalScrollPosition",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+ofs039d:
+   jump ofs03ae
+   getlocal0
+   pushscope
+   getlocal2
+   pushscope
+   newcatch 0
+   dup
+   setlocal3
+   pushscope
+   throw
+   popscope
+   kill 3
+ofs03ae:
+   pushbyte -1
+   jump ofs03d1
+   getlocal0
+   pushscope
+   getlocal2
+   pushscope
+   newcatch 1
+   dup
+   setlocal3
+   pushscope
+   popscope
+   kill 3
+   coerce_a
+   setlocal 4
+   pushbyte 0
+   jump ofs03d1
+   label
+   pop
+ofs03cb:
+   label
+   getlocal 4
+   kill 4
+   throw
+ofs03d1:
+   findproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_insertingConsoleHistory")
+   pushfalse
+   setproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_insertingConsoleHistory")
+   lookupswitch ofs03e2, [ofs03cb]
+ofs03e2:
+   returnvoid
+end ; code

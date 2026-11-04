@@ -1,0 +1,5 @@
+com.sulake.habbo.room.object.logic.room:RoomLogic	_-28m::_-1Ul
+com.sulake.habbo.room.object.visualization.room:RoomPlane	_-0WW::_-y0
+com.sulake.habbo.room:RoomObjectEventHandler	_-01y::_-Qs
+com.sulake.room.object.logic:IRoomObjectEventHandler	_-aS::_-4Ij
+com.sulake.room.object.visualization:IRoomPlane	_-4CJ::_-3fx

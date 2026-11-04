@@ -1,0 +1,77 @@
+import java.io.*;import java.nio.file.*;import java.time.*;import java.util.*;import com.jpexs.decompiler.flash.SWF;import com.jpexs.decompiler.flash.abc.types.traits.*;
+// Saved AVM2 readers/handlers/composers run here. Android/GPU, Feathers layout,
+// Flash events, wall clock and timer scheduling are explicit boundaries.
+class VerifyToken61 extends VerifyFeatures33 {
+ static final String C61="loginpatch:Console61",R61="loginpatch:RoomAppearance61",DESKTOP="com.sulake.habbo.ui:RoomDesktop",HUI="com.sulake.habbo.ui:HabboUI",MESSAGE="com.sulake.habbo.messenger:ConversationMessage",HSL="com.sulake.habbo.room.events:RoomEngineHSLColorEnableEvent",VIEW="_-0od::_-3UO";
+ record Task(int id,int due,Bound callback,List<Object>args){}
+ static class V extends VM33 {
+  final List<Task>timers=new ArrayList<>();int nextTimer=1;final long epoch=Instant.parse("2026-11-01T15:00:00Z").toEpochMilli();Obj toner,desktop,view,hub,proxy,main;final List<List<Object>> clears=new ArrayList<>();int frames;boolean permission=true;
+  V(SWF s)throws Exception{super(s);}
+  @Override boolean own(String t){return super.own(t)||Set.of("loginpatch::Console61","loginpatch::RoomAppearance61").contains(t);}
+  @Override Object lexical(Method m,Obj self,String n,int i){
+   if(m.cls().logical().equals(C61)||m.cls().logical().equals(R61)||m.cls().raw().equals("_-0AB::_-0By"))for(var tr:m.cls().abc().class_info.get(m.cls().index()).static_traits.traits)if(tr instanceof TraitMethodGetterSetter&&n.equals(AuditStartup.name(m.cls().abc(),tr.name_index)))return new Bound(new Ref(m.cls().raw()),n);
+   if(n.equals("Date")||n.equals("clearTimeout"))return new Ref(n);return super.lexical(m,self,n,i);
+  }
+  @Override Object construct(String t,List<Object>a){
+   if(t.equals("Date")){var d=new Obj("date61");d.put("time",a.isEmpty()?epoch+now:number(a.get(0)));return d;}
+   Object value=super.construct(t,a);if(value instanceof Obj o&&t.startsWith("_-0sg::")&&!a.isEmpty()&&a.get(0) instanceof String)o.put("type",a.get(0));return value;
+  }
+  @Override Object get(Object r,Object k){
+   if(r instanceof Ref ref&&ref.name().equals("starling.core::Starling")&&k.equals("current")){var value=new Obj("ui-starling");value.put("stage",stage);value.put("nativeStage",nativeStage);return value;}
+   if(r instanceof Ref ref&&raw.containsKey(ref.name())){var c=raw.get(ref.name());for(var tr:c.abc().class_info.get(c.index()).static_traits.traits)if(tr instanceof TraitMethodGetterSetter m&&m.kindType==1&&k.equals(AuditStartup.name(c.abc(),tr.name_index)))return new Bound(r,String.valueOf(k));}
+   if(r instanceof Obj o&&o.type.equals("date61")){if(k.equals("time"))return o.get(k);var d=Instant.ofEpochMilli((long)number(o.get("time"))).atZone(ZoneId.of("America/Sao_Paulo"));return switch(String.valueOf(k)){case "date"->d.getDayOfMonth();case "month"->d.getMonthValue()-1;case "fullYear"->d.getYear();case "hours"->d.getHour();case "minutes"->d.getMinute();default->super.get(r,k);};}
+   if(r==e&&k.equals("connection"))return connection;
+   return super.get(r,k);
+  }
+  @Override Object call(Object r,String n,List<Object>a){
+   if(r instanceof Obj o&&o.type.equals("gpu-context61")){if(n.equals("clear")){clears.add(new ArrayList<>(a));return null;}if(n.equals("present"))return null;}
+   if(r instanceof Obj o&&o.type.equals("starling-frame61")&&n.equals("nextFrame")){frames++;return null;}
+   if(r instanceof Map<?,?>m&&m.get(n) instanceof Bound fn)return call(fn.receiver(),fn.name(),a);
+   if(r instanceof Ref ref&&Set.of("loginpatch::Console61","loginpatch::RoomAppearance61","_-0AB::_-0By").contains(ref.name()))return execute(method(raw.get(ref.name()).logical(),n),staticObject(ref.name()),a.toArray());
+   if(n.equals("setTimeout")){check(a.get(0) instanceof Bound,"Timer callback not bound");int id=nextTimer++;timers.add(new Task(id,now+num(a.get(1)),(Bound)a.get(0),new ArrayList<>(a.subList(2,a.size()))));return id;}
+   if(n.equals("clearTimeout")){int id=num(a.get(0));timers.removeIf(t->t.id()==id);return null;}
+   if(r==toner){if(n.equals("getId"))return 777;if(n.equals("getState"))return toner.get("state");if(n.equals("getModel"))return toner.get("model");}
+   if(r==e&&n.equals("_-46h")&&num(a.get(0))==12345&&num(a.get(1))==777&&num(a.get(2))==10)return toner;
+   if(r==view&&n.equals("removeChildren"))return null;
+   if(r instanceof Obj o&&(ui(o.type)||scene(o.type))&&n.equals("removeEventListener")){o.remove("listener:"+a.get(0));return null;}
+   return super.call(r,n,a);
+  }
+  Object c(String n,Object...a){return execute(method(C61,n),staticObject("loginpatch::Console61"),a);}
+  Object appearance(String n,Object...a){return execute(method(R61,n),staticObject("loginpatch::RoomAppearance61"),a);}
+  void advance(int delta){int finish=now+delta;int count=0;while(true){Task next=timers.stream().filter(t->t.due()<=finish).min(Comparator.comparingInt(Task::due)).orElse(null);if(next==null)break;check(++count<100,"Timer loop");timers.remove(next);now=next.due();call(next.callback.receiver(),next.callback.name(),next.args);}now=finish;}
+  @SuppressWarnings("unchecked") Obj openConsole(int peer){var messenger=new Obj("fixture-history-messenger");messenger.put("disposed",false);helper("rememberMessenger",messenger,100);var conversation=new Obj("fixture-conversation");conversation.put("_-3aV",peer);var collection=uiObject("_-1Ab::_-nO");collection.put("items",new ArrayList<>());conversation.put("messages",collection);var list=uiObject("_-2xS::_-0xe");list.put("fixed-layout",true);list.put("height",500);list.put("history-provider",collection);list.put("dataProvider",collection);list.put("stage",stage);list.put("verticalScrollPosition",0);list.put("maxVerticalScrollPosition",0);helper("consoleOpened",messenger,conversation,list);return list;}
+  void reply(int peer,String id,int seconds)throws Exception{var packet=new Packet().i(peer).i(1);historyEntry(packet,peer,"Mensagem çã 🎮",seconds,id);var reader=new Reader(packet.bytes());helper("receiveConsoleHistory",reader);check(reader.b.remaining()==0,"History boundary changed");}
+  void setupToner()throws Exception{
+   desktop=allocate(rawType(DESKTOP));desktop.put("_-0Bh",session);desktop.put("_roomEngine",e);desktop.put("_-2UG",0);session.put("roomId",12345);session.put("_-0lf",true);session.put("_-1Ti",false);session.put("disposed",false);
+   view=allocate(VIEW);view.put("_-37g",new Obj("renderer61"));desktop.put("_view3D",view);proxy=allocate("_-0xp::Stage3DProxy");proxy.put("_-In",new Obj("gpu-context61"));proxy.put("_-3PZ",false);view.put("_stage3DProxy",proxy);main=allocate(rawType(":HabboTabletMain"));main.put("_stage3DProxy",proxy);main.put("_starling",new Obj("starling-frame61"));
+   toner=new Obj("toner61");toner.put("state",1);var model=new Obj("model-double");model.put("furniture_room_background_color_hue",85);model.put("furniture_room_background_color_saturation",255);model.put("furniture_room_background_color_lightness",127);toner.put("model",model);
+   hub=allocate(rawType(HUI));hub.put("_-3Wh",true);hub.put("_-3x9",desktop);hub.put("_-4ZL",false);hub.put("_-dR",false);hub.put("_disposed",false);
+  }
+  void colorEvent(boolean on,int h,int s,int l){var event=(Obj)construct(rawType(HSL),List.of("ROHSLCEE_ROOM_BACKGROUND_COLOR",12345,on,h,s,l));execute(method(HUI,"_-4P7"),hub,event);}
+  Obj toneRequest(){var event=(Obj)construct(rawType("com.sulake.habbo.room.events:RoomEngineObjectEvent"),List.of("RETWE_REQUEST_BACKGROUND_COLOR",12345,777,10));return event;}
+  void frame(){execute(method(":HabboTabletMain","onEnterFrame"),main,(Object)null);}
+ }
+ static void dates(SWF swf)throws Exception{
+  var v=new V(swf);var sent=(Obj)v.construct(v.rawType(MESSAGE),List.of(1,100,"Texto original 🎮",0));var received=(Obj)v.construct(v.rawType(MESSAGE),List.of(2,200,"Mensagem anterior",26*3600));String a=String.valueOf(v.c("text",sent)),b=String.valueOf(v.c("text",received));check(a.equals("Texto original 🎮\n01/11/2026 12:00")&&b.equals("Mensagem anterior\n31/10/2026 10:00"),"Actual date/Unicode/day rollover incorrect: "+a+" / "+b);v.advance(9*3600*1000);check(v.c("text",sent).equals(a),"Message date moves as time passes");check(v.get(sent,"message").equals("Texto original 🎮"),"Model text mutated by timestamp");var unknown=v.construct(v.rawType(MESSAGE),List.of(2,200,"Sem data",-1));check(v.c("text",unknown).equals("Sem data"),"Missing timestamp fabricated");System.out.println("PASS: actual message constructors preserve raw Unicode; local dates for sent/received messages, previous day and9h later are stable; unavailable dates not fabricated.");
+ }
+ @SuppressWarnings("unchecked") static void pagination(SWF swf)throws Exception{
+  var v=new V(swf);var list=v.openConsole(200);check(v.sent.size()==1&&payload(v,v.sent.get(0)).equals(List.of(200,"")),"Initial request wrong");v.reply(200,"m3",100);check(v.sent.size()==1,"Prefetch raced current response");v.advance(400);check(v.sent.size()==2&&payload(v,v.sent.get(1)).equals(List.of(200,"m3")),"Empty viewport not filled with older page");v.helper("consoleHistoryScrolled",eventFor(list));check(v.sent.size()==2,"Overlapping request while pending");v.reply(200,"m2",200);v.advance(400);check(v.sent.size()==3,"Second bounded prefetch missing");v.reply(200,"m1",300);v.advance(400);check(v.sent.size()==3,"Automatic prefetch not bounded to2 pages");list.put("verticalScrollPosition",0);v.helper("consoleHistoryScrolled",eventFor(list));check(v.sent.size()==4&&payload(v,v.sent.get(3)).equals(List.of(200,"m1")),"Manual older-page cursor wrong");v.helper("receiveConsoleHistory",new Reader(new Packet().i(200).i(0).bytes()));v.advance(6000);v.helper("consoleHistoryScrolled",eventFor(list));check(v.sent.size()==4,"Empty history causes infinite fetch");
+  var retry=new V(swf);retry.openConsole(200);retry.advance(5400);check(retry.sent.size()==2,"One initial timeout retry missing");retry.advance(10000);check(retry.sent.size()==2,"Initial timeout retries unbounded");
+  var close=new V(swf);close.openConsole(200);close.reply(200,"m1",10);close.helper("consoleConversationRemoved",200);close.advance(6000);check(close.sent.size()==1,"Closed conversation retained prefetch");
+  var account=new V(swf);account.openConsole(200);account.reply(200,"m1",10);account.helper("resetAccountState");account.advance(6000);check(account.sent.size()==1,"Account reset retained request");
+  testHistory(new V(swf),new SWF(new FileInputStream("work/plus.swf"),false));
+  System.out.println("PASS: actual history reader/cursors fill a short viewport, cap prefetch to2, forbid overlap, terminate on empty page, retry initial timeout once, release timers on close/reset; original sender/dedup/unread/scroll/schema regression passed.");
+ }
+ static void toner(SWF before,SWF swf)throws Exception{
+  check(num(4278190080.0)==-16777216&&num(Double.NaN)==0,"AVM2 ToInt32 must wrap the opaque ARGB high byte");
+  var old=new V(before);old.setupToner();old.colorEvent(true,85,255,127);long original=Integer.toUnsignedLong(num(old.get(old.desktop,"_-2jo")));check(original!=0&&num(old.get(old.view,"backgroundColor"))==0,"Teste33 stored-but-unapplied background not reproduced");
+  var v=new V(swf);v.setupToner();Obj sameView=v.view;for(int[] hsl:List.of(new int[]{85,255,127},new int[]{170,255,127},new int[]{0,0,255},new int[]{0,255,127},new int[]{42,133,200})){v.colorEvent(true,hsl[0],hsl[1],hsl[2]);check(v.view==sameView&&num(v.get(v.view,"backgroundColor"))==num(v.get(v.desktop,"_-2jo")),"Same live view did not receive Toner update");int rgb=num(v.get(v.desktop,"_-2jo"));v.frame();var clear=v.clears.get(v.clears.size()-1);for(int channel=0;channel<3;channel++)check(Math.abs(number(clear.get(channel))-((rgb>>(16-channel*8))&255)/255.0)<0.000001,"Shared GPU frame clear mismatch rgb="+rgb+" clear="+clear+" proxy="+v.proxy.get("_color"));check(number(clear.get(3))==1,"Room background clear is transparent");var renderer=(Obj)v.view.get("_-37g");for(int channel=0;channel<3;channel++)check(Math.abs(number(renderer.get(List.of("backgroundR","backgroundG","backgroundB").get(channel)))-((rgb>>(16-channel*8))&255)/255.0)<0.000001,"Native renderer clear channel not updated");}v.colorEvent(false,0,0,0);check(num(v.get(v.view,"backgroundColor"))==0,"Toner off did not restore black immediately");v.frame();check(v.clears.get(v.clears.size()-1).equals(List.of(0.0,0.0,0.0,1.0)),"Off event did not clear next frame to opaque black");v.colorEvent(true,85,255,127);check(num(v.get(v.view,"backgroundColor"))!=0,"Toner on requires room reentry");v.frame();check(v.frames==7,"Room rendering was recreated or skipped");
+  v.execute(v.method(HUI,"_-0KM"),v.hub,v.toneRequest());var helper=v.staticObject("loginpatch::RoomAppearance61");check(helper.get("_popup")!=null,"Real HabboUI event route did not open Toner");var controls=(List<?>)helper.get("_controls");check(controls.size()==3&&num(((Obj)controls.get(0)).get("value"))==85,"Toner model HSL not loaded");((Obj)controls.get(0)).put("value",170);v.appearance("changed",(Object)null);v.appearance("save",(Object)null);check(payload(v,v.sent.get(v.sent.size()-1)).equals(List.of(777,170,255,127)),"Toner save composer fields/order incorrect");int count=v.sent.size();v.appearance("toggle",(Object)null);var oracle=new WiredVM(new SWF(new FileInputStream("work/plus.swf"),false));var nativeToggle=(Obj)oracle.construct("com.sulake.habbo.communication.messages.outgoing.room.engine::UseFurnitureMessageComposer",List.of(777));check(v.sent.size()==count+1&&payload(v,v.sent.get(count)).equals(oracle.call(nativeToggle,"getMessageArray",List.of())),"Toner toggle differs from reference composer");v.session.put("_-0lf",false);v.session.put("_-1Ti",false);v.appearance("save",(Object)null);check(v.sent.size()==count+1&&helper.get("_popup")==null,"Lost room rights can save or retain editor");
+  v.appearance("release",v.desktop);check(num(v.get(v.proxy,"color"))==0,"Leaving room retains Toner background");System.out.println("PASS: reproduced Teste33 stored-but-unapplied color; real HSL room events update the same View3D/native RGB channels and actual HabboTabletMain/Stage3DProxy frame clear with opaque alpha, including off/on, without room recreation. Actual HabboUI request opens HSL editor, native composer saves four fields, toggle preserves furniture ID, rights loss closes it.");
+ }
+ static void door(SWF old,SWF swf)throws Exception{
+  var a=new V(old);var b=new V(swf);String text=map(true,true,false);check(entrance(a,text)!=null&&entrance(b,text)==null,"Special entrance floor still selected");for(boolean top:List.of(false,true)){String floor=map(true,!top,top);var x=a.room(floor);var y=b.room(floor);int px=top?6:3,py=top?0:3;check(number(a.call(x,"_-4-t",List.of(px,py)))==number(b.call(y,"_-4-t",List.of(px,py))),"Actual room entrance coordinates/height changed");check(number(b.call(y,"_-4-t",List.of(1,8)))==0,"Isolated tile became doorway");}
+  System.out.println("PASS: special entrance-floor selection removed; real RoomMessageHandler retains both90/180-degree door heights/positions and flat isolated tiles. Wall mask/native movement code preserved by audit.");
+ }
+ public static void main(String[]a)throws Exception{var before=new SWF(new FileInputStream(a[0]),false);var now=new SWF(new FileInputStream(a[1]),false);if(a.length>2&&a[2].equals("toner")){toner(before,now);return;}dates(now);pagination(now);toner(before,now);door(before,now);cacheLimits(now);System.out.println("PASS: token61 focused checks complete; Android/GPU/server validation pending.");}
+}

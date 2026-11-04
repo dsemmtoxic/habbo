@@ -1,0 +1,27 @@
+PASS lighting
+PASS settings
+PASS mesh
+PASS render
+PASS logout
+PASS entrance-sorting
+PASS localization
+PASS login
+PASS navigator
+PASS console
+PASS market
+PASS mask
+PASS ping
+PASS avatars
+PASS lighting-reference
+PASS room-history
+PASS event
+PASS styles
+PASS badges
+PASS dc
+PASS gifts
+PASS colorBindings
+PASS audit
+PASS browser-script
+PASS startup-types
+PASS retained33
+PASS: 27 focused/regression checks; physical Android and live hotel validation remain pending.

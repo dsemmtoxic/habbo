@@ -1,0 +1,1 @@
+PASS: native promoted-room packet/GuestRoomData parsing supplies event names and minutes. Promotion list titles preserve room identity, unnamed/normal-room fallbacks work, details anchor below statistics, countdown decreases without extending on copy, expires and recycles cleanly.

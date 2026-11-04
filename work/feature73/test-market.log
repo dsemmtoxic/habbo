@@ -1,0 +1,1 @@
+PASS: actual own-offer packet and native logic filter three expired/invalid rows and a sold row, preserve balance, display only active offers/count, retain the valid last minute and duplicate-safe Retirar with failure retry. Open-list expiry removes rows without sending cancel/redeem packets; listeners released.

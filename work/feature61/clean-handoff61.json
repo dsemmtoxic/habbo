@@ -1,0 +1,11 @@
+{
+  "checkpoint": 61,
+  "cleanSourceCompilation": true,
+  "precompiledJavaClassesProvided": false,
+  "javaSourceFiles": 42,
+  "regression": "all four suites passed from allowlisted handoff files, using external pinned FFDec only",
+  "validationSha256": "ff7ff8632a3c4667231c4d48c434f86a439f5d46a51fe9ba4aedb261dd657f49",
+  "baselineRegistryOracle": "work/base24.swf",
+  "swfSha256": "ed0b5fe3a517f77d4bacedfcdd3119af132e21a43c2a0fbae9ea688e95747bac",
+  "productionCodeChangedAfterVerification": false
+}

@@ -1,0 +1,2 @@
+PASS: reproduced65 startup failure with native slot coercion: Error #1034: native LoginScreen._-0ya requires _-2xS::_-Fk; received starling.text::TextField
+PASS: native initializeHandler/onAddedToStage completes in 8 unlinked/linked and landscape/portrait cases; both native Label slots stay type-correct, outlined modern views are separate, token action and disposal preserved. Real Android transition remains a device boundary.

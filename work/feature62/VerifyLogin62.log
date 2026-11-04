@@ -1,0 +1,3 @@
+PASS: native LoginScreen builds the responsive card at7 landscape/portrait sizes; visible masked token, separate paste, primary enter, compact hotel flag, site action, nine hotel translations, resize without duplication and disposal without retained token/callbacks.
+PASS: typed token and keyboard Enter use original Teste33 validation/authentication, typed text takes precedence over clipboard, empty-field shortcut retained, wrong hotel/oversized paste rejected and selected-hotel website preserved. No automatic login added.
+PASS: login62; real keyboard/font/device validation pending.

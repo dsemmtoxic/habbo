@@ -1,0 +1,32 @@
+Retained72 methods: 37973
+
+Changed methods:
+com.sulake.room.renderer:RoomTouchHandler|I1:_-01v
+loginpatch:RoomUse70|S1:closePresent
+loginpatch:RoomUse70|S1:present
+loginpatch:RoomUse70|S1:presentEvent
+loginpatch:RoomUse70|S1:presentRequest
+loginpatch:RoomUse70|S1:presentSelection
+loginpatch:RoomUse70|S1:readTap
+loginpatch:RoomUse70|S1:readTrophy
+loginpatch:RoomUse70|S1:showPresent
+loginpatch:RoomUse70|S1:singleTap
+loginpatch:Text68|initializer
+
+Added methods:
+com.sulake.habbo.ui:RoomDesktop|I1:presentController73
+com.sulake.habbo.widgets.furni.present:PresentCtrl|I1:prepareGift73
+loginpatch:RoomUse70|S1:caption
+loginpatch:RoomUse70|S1:colorBlock
+loginpatch:RoomUse70|S1:fit
+loginpatch:RoomUse70|S1:giftAction
+loginpatch:RoomUse70|S1:giftIcon
+loginpatch:RoomUse70|S1:holdReader
+loginpatch:RoomUse70|S1:messageBody
+loginpatch:RoomUse70|S1:openGift
+loginpatch:RoomUse70|S1:ownsGift
+loginpatch:RoomUse70|S1:reader
+loginpatch:RoomUse70|S1:readerKind
+loginpatch:RoomUse70|S1:returnGift
+loginpatch:RoomUse70|S1:showReader
+loginpatch:RoomUse70|S1:showTrophy

@@ -1,0 +1,268 @@
+public static function initConsoleHistoryProtocol(header:int) : void
+      {
+         _consoleHistoryHeader = header;
+      }
+      
+      public static function rememberMessenger(messenger:Object, userId:int) : void
+      {
+         _messenger = messenger;
+         _consoleOwnId = userId;
+         _consoleHistories = new Dictionary();
+         _consoleViews = new Dictionary(true);
+      }
+      
+      public static function consoleOpened(messenger:Object, conversation:Object, list:Object) : void
+      {
+         if(conversation == null || list == null)
+         {
+            return;
+         }
+         _messenger = messenger;
+         var peer:int = int(conversation["_-3aV"]);
+         if(peer <= 0)
+         {
+            return;
+         }
+         var state:Object = _consoleHistories[peer];
+         if(state != null && state.conversation !== conversation)
+         {
+            consoleConversationRemoved(peer);
+            state = null;
+         }
+         if(state == null)
+         {
+            state = {
+               "conversation":conversation,
+               "list":list,
+               "ids":[],
+               "cursor":"",
+               "requested":"",
+               "pending":false,
+               "loaded":false,
+               "more":true,
+               "last":-5000
+            };
+            _consoleHistories[peer] = state;
+         }
+         state.conversation = conversation;
+         state.list = list;
+         _consoleViews[list] = state;
+         list.removeEventListener("scroll",consoleHistoryScrolled);
+         list.addEventListener("scroll",consoleHistoryScrolled);
+         if(!state.loaded)
+         {
+            requestConsoleHistory(peer,state);
+         }
+      }
+      
+      public static function consoleConversationRemoved(peer:int) : void
+      {
+         var state:Object = _consoleHistories[peer];
+         if(state != null)
+         {
+            for each(var oldId:String in state.ids)
+            {
+               delete _consoleHistoryIds[oldId];
+            }
+            if(_consoleViews[state.list] === state)
+            {
+               delete _consoleViews[state.list];
+            }
+         }
+         var stale:Array = [];
+         for(var liveId:Object in _consoleLivePeers)
+         {
+            if(int(_consoleLivePeers[liveId]) == peer)
+            {
+               stale.push(liveId);
+            }
+         }
+         for each(liveId in stale)
+         {
+            delete _consoleLiveIds[liveId];
+            delete _consoleLivePeers[liveId];
+         }
+         delete _consoleHistories[peer];
+      }
+      
+      public static function consoleHistoryScrolled(event:Object) : void
+      {
+         if(_insertingConsoleHistory)
+         {
+            return;
+         }
+         var list:Object = event.currentTarget;
+         var state:Object = _consoleViews[list];
+         if(state == null || !state.loaded || !state.more || state.pending || list.verticalScrollPosition > 12)
+         {
+            return;
+         }
+         requestConsoleHistory(int(state.conversation["_-3aV"]),state);
+      }
+      
+      private static function requestConsoleHistory(peer:int, state:Object) : void
+      {
+         if(_messenger == null || _messenger.disposed || state.pending || !state.more)
+         {
+            return;
+         }
+         var now:int = getTimer();
+         if(now - int(state.last) < 4000)
+         {
+            return;
+         }
+         var C:Class = klass("loginpatch::ConsoleHistoryPayload");
+         state.requested = String(state.cursor);
+         state.last = now;
+         state.pending = true;
+         _messenger.send(new C(peer,String(state.cursor)));
+         setTimeout(consoleHistoryTimeout,10000,peer,state);
+      }
+      
+      public static function consoleHistoryTimeout(peer:int, state:Object) : void
+      {
+         if(_consoleHistories[peer] === state && getTimer() - int(state.last) >= 9900)
+         {
+            state.pending = false;
+         }
+      }
+      
+      public static function insertingConsoleHistory() : Boolean
+      {
+         return _insertingConsoleHistory;
+      }
+      
+      private static function receiveConsoleHistory(data:Object) : void
+      {
+         var entries:Array;
+         var i:int;
+         var sender:int;
+         var state:Object;
+         var first:Boolean;
+         var oldest:String;
+         var messages:Array;
+         var C:Class;
+         var entry:Object;
+         var id:String;
+         var collection:Object;
+         var list:Object;
+         var active:Boolean;
+         var oldMax:Number;
+         var oldPosition:Number;
+         var peer:int = int(data["_-0u0"]());
+         var count:int = int(data["_-0u0"]());
+         if(count < 0 || count > 5000)
+         {
+            throw new ArgumentError("Histórico de console inválido");
+         }
+         entries = [];
+         i = 0;
+         while(i < count)
+         {
+            sender = int(data["_-0u0"]());
+            data["_-nr"]();
+            data["_-nr"]();
+            entries.push({
+               "sender":sender,
+               "text":data["_-nr"](),
+               "seconds":data["_-0u0"](),
+               "id":data["_-nr"]()
+            });
+            i++;
+         }
+         state = _consoleHistories[peer];
+         if(state == null)
+         {
+            return;
+         }
+         state.pending = false;
+         first = !state.loaded;
+         state.loaded = true;
+         if(count == 0)
+         {
+            state.more = false;
+            return;
+         }
+         oldest = String(entries[0].id);
+         state.more = oldest != "" && oldest != String(state.requested);
+         state.cursor = oldest;
+         messages = [];
+         C = klass("_-20o::_-2uW");
+         for each(entry in entries)
+         {
+            id = String(entry.id);
+            if(!(id != "" && (_consoleHistoryIds[id] === true || _consoleLiveIds[id] === true)))
+            {
+               if(id != "")
+               {
+                  _consoleHistoryIds[id] = true;
+                  state.ids.push(id);
+               }
+               messages.push(new C(int(entry.sender) == _consoleOwnId ? 1 : 2,int(entry.sender),String(entry.text),int(entry.seconds)));
+            }
+         }
+         if(messages.length == 0)
+         {
+            return;
+         }
+         collection = state.conversation.messages;
+         list = state.list;
+         active = _consoleViews[list] === state && list.dataProvider === collection;
+         oldMax = active ? Number(list.maxVerticalScrollPosition) : 0;
+         oldPosition = active ? Number(list.verticalScrollPosition) : 0;
+         _insertingConsoleHistory = true;
+         try
+         {
+            collection.data = messages.concat(collection.data);
+            if(active)
+            {
+               list.validate();
+               list.verticalScrollPosition = first ? list.maxVerticalScrollPosition : Math.max(0,oldPosition + list.maxVerticalScrollPosition - oldMax);
+            }
+         }
+         finally
+         {
+            _insertingConsoleHistory = false;
+         }
+      }
+      
+      private static function loadSocialPreferences() : void
+      {
+         var C:Class;
+         var settings:Object;
+         if(_socialPreferencesLoaded)
+         {
+            return;
+         }
+         _socialPreferencesLoaded = true;
+         try
+         {
+            C = klass("flash.net::SharedObject");
+            settings = C.getLocal("habbo_classic_commands");
+            if(settings.data.friendhl === true || settings.data.friendhl === false)
+            {
+               _friendHighlightEnabled = Boolean(settings.data.friendhl);
+            }
+         }
+         catch(error:Error)
+         {
+         }
+      }
+      
+      private static function saveSocialPreferences() : void
+      {
+         var C:Class;
+         var settings:Object;
+         try
+         {
+            C = klass("flash.net::SharedObject");
+            settings = C.getLocal("habbo_classic_commands");
+            settings.data.friendhl = _friendHighlightEnabled;
+            settings.flush();
+         }
+         catch(error:Error)
+         {
+         }
+      }
+      
+      

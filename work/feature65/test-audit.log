@@ -1,0 +1,1 @@
+PASS: 37765 existing methods preserved, including working64 light persistence/rendering, console, original33 auth and protocol. Only login/browser presentation, two light palette methods, four mesh hooks and read-only native mask/UV bridges changed; all AVM2 offsets valid.

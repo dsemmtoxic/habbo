@@ -1,0 +1,58 @@
+{
+  "checkpoint": 70,
+  "base": 33,
+  "date": "2026-11-03",
+  "request": "bounded centered chat styles, room history timestamps, duration-only event row, profile badges, single-tap DC, visitor present messages",
+  "reference": {
+    "file": "work/plus.swf",
+    "sha256": "d9672557cde96b0f8b50f9408946777e872b28d39b398d07531d119c2821f8ff",
+    "badges": {
+      "query": "com.sulake.habbo.communication.messages.outgoing.inventory.badges:GetBadgesComposer",
+      "queryHeader": 1505,
+      "payload": [],
+      "eventHeader": 1477,
+      "saveHeader": 3309,
+      "fragmentSchema": [
+        "totalFragments int",
+        "fragmentNumber int",
+        "count int",
+        "id int and badge code string pairs"
+      ]
+    },
+    "present": {
+      "class": "com.sulake.habbo.room.object.logic.furniture:FurniturePresentLogic",
+      "dataKeys": [
+        "MESSAGE",
+        "PURCHASER_NAME"
+      ],
+      "visitorReading": "local room model, no PresentOpen3303 packet"
+    }
+  },
+  "causes": {
+    "picker": "native Callout anchored above chat button with a 300-unit max height",
+    "history": "native ChatItem timestamp is monotonic getTimer; renderer had no date or time label",
+    "event": "time caption consumed the name width",
+    "badges": [
+      "owned badge list absent until another view loaded inventory",
+      "touch target can be a child of ImageLoader",
+      "dirty flag was set after synchronous Callout.close callback"
+    ],
+    "presents": "RoomDesktop.useObject returned before reaching gift logic for noncontrollers"
+  },
+  "compatibility": {
+    "before69SwfSha256": "5850c04fa08445227f965d9472131f8d9a03dcbc7f8d54ee79fb16b7d0c756e3",
+    "nativeDexSha256": "64da4daf9ad0434f8ec0a1f09a49af392ef4f2f1bfc32733dbd3ca2540c41d15",
+    "base33SwfSha256": "de8dd00c53bd9ece24563558ce7a19ad6183e94bad2ec651c06fd20f46d3e901",
+    "newComposerOnly": "outgoing1505 alias; incoming1505 is a separate direction, unchanged"
+  },
+  "gesture": {
+    "setting": "dc",
+    "enabledSingleTapMaxMs": 250,
+    "nativeLongPressMinMs": 300,
+    "disabledSingleTapMaxMs": 1500,
+    "hook": "RoomTouchHandler single-tap only",
+    "longPress": "native selection retained"
+  },
+  "physicalAndroidTested": false,
+  "liveHotelTested": false
+}

@@ -1,0 +1,1 @@
+PASS: actual HabboUI and RoomObjectEventHandler Use paths open Toner/Dimmer controls; HSL values save unchanged, get-presets has furniture id, native preset reader consumes on/off+id, save matches seven-field Plus schema, actual dimmer event bridges to engine color API. Floor/wall dimmers retain their category; ordinary furniture retains Use action.

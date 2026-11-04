@@ -1,0 +1,3 @@
+PASS: reproduced61 native opaque room gradient/mode reset covering the clear color. Native context.root, MainViewManager room transition, CoreComponentContext and gradient vertex upload/draw follow five colors and off/on in one room/view. Actual integer-array data -> room model -> Toner logic -> object/room handlers reaches the same background. Early enabled state, return to room, GPU-context recovery, repeated-color buffer reuse, stale-room rejection and original-background restoration passed.
+PASS: actual native RoomLogic rejects only the door hole; old61 creates it, windows retain native masking, entrance coordinates/height, normal movement and isolated-floor regression retained.
+PASS: appearance62; physical Android/GPU/server pending.

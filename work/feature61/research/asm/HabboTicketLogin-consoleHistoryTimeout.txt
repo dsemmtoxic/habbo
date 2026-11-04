@@ -1,0 +1,31 @@
+
+
+code
+   getlocal0
+   pushscope
+   debug 1, "peer", 0, 0
+   debug 1, "state", 1, 0
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleHistories")
+   getlocal1
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal2
+   strictequals
+   dup
+   iffalse ofs0032
+   pop
+   findpropstrict QName(PackageNamespace("flash.utils"),"getTimer")
+   callproperty QName(PackageNamespace("flash.utils"),"getTimer"), 0
+   getlocal2
+   getproperty Multiname("last",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_i
+   subtract
+   pushshort 9900
+   greaterequals
+ofs0032:
+   iffalse ofs003c
+   getlocal2
+   pushfalse
+   setproperty Multiname("pending",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+ofs003c:
+   returnvoid
+end ; code

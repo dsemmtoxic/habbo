@@ -1,0 +1,3 @@
+PASS: Real AirPlus history schema/request parity, pre-login sent/received messages, live/history ID deduplication, cursor pagination, empty termination, unread-state preservation and stable scroll position.
+PASS: actual history reader/cursors fill a short viewport, cap prefetch to2, forbid overlap, terminate on empty page, retry initial timeout once, release timers on close/reset; original sender/dedup/unread/scroll/schema regression passed.
+PASS: raw Unicode body and small independent time label, one badge per calendar day (Hoje/Ontem/dd-MM), midnight rollover and renderer cleanup. Original pagination, cursor, unread, retry and deduplication regression passed.

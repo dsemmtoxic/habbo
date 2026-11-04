@@ -1,0 +1,1 @@
+PASS: native ChatItem construction captures a stable local receipt date from getTimer and wall clock. History shows date/time in a separate left column, preserves Unicode/name/body, handles next day/recycled rows and releases controls with a void native dispose override.

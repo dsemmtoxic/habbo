@@ -1,0 +1,1 @@
+PASS: saved :ping/:pingsay command hook sends real native latency probe and consumes matching native response; private native bubble vs public normal-chat composer, zero padding, values over 999, timeout, duplicates, old-room replies and logout cleanup. Unrelated latency probes retained; transport is a fixture.

@@ -1,0 +1,1 @@
+PASS: reproduced66 stale SSO flag blocking the next boot; explicit native reboot now clears transient auth/timer/failure state, accepts hello, opens an initialized login and permits a second33 login. Browser profile and normal disconnect errors retained.

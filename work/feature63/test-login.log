@@ -1,0 +1,1 @@
+PASS: native LoginScreen executes full layout at8 sizes; controls/gear contained, native bordered skin, original token input/Enter/auth route retained. Login settings opens six switches using validated native APIs.

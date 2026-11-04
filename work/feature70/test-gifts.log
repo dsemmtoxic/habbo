@@ -1,0 +1,1 @@
+PASS: visitor present logic opens a read-only message popup from room data, with no gift-open/claim packets. Controller/native actions and unrelated furniture permission rules remain unchanged.

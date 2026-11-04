@@ -1,0 +1,7 @@
+PASS: actual message constructors preserve raw Unicode; local dates for sent/received messages, previous day and9h later are stable; unavailable dates not fabricated.
+PASS: Real AirPlus history schema/request parity, pre-login sent/received messages, live/history ID deduplication, cursor pagination, empty termination, unread-state preservation and stable scroll position.
+PASS: actual history reader/cursors fill a short viewport, cap prefetch to2, forbid overlap, terminate on empty page, retry initial timeout once, release timers on close/reset; original sender/dedup/unread/scroll/schema regression passed.
+PASS: reproduced Teste33 stored-but-unapplied color; real HSL room events update the same View3D/native RGB channels and actual HabboTabletMain/Stage3DProxy frame clear with opaque alpha, including off/on, without room recreation. Actual HabboUI request opens HSL editor, native composer saves four fields, toggle preserves furniture ID, rights loss closes it.
+PASS: special entrance-floor selection removed; real RoomMessageHandler retains both90/180-degree door heights/positions and flat isolated tiles. Wall mask/native movement code preserved by audit.
+PASS: Five simulated memory levels bound the avatar LRU to 256/128/64/0 libraries, retain newest dependencies, preserve mandatory and loading libraries, and permit explicit forced cleanup. Furniture cache policy remains unchanged.
+PASS: token61 focused checks complete; Android/GPU/server validation pending.

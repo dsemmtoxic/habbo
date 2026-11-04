@@ -1,0 +1,12 @@
+com.sulake.habbo.communication.messages.outgoing.room.furniture:SetRoomBackgroundColorDataComposer	_-26z::_-120
+com.sulake.habbo.messenger.view:ConversationMessageItemRenderer	_-2-R::_-2Rc
+com.sulake.habbo.messenger.view:ConversationSlot	_-2-R::_-6S
+com.sulake.habbo.messenger:Conversation	_-20o::_-0Ep
+com.sulake.habbo.messenger:ConversationMessage	_-20o::_-2uW
+com.sulake.habbo.messenger:HabboTabletMessenger	_-20o::_-4bn
+com.sulake.habbo.room.events:RoomEngineRoomColorEvent	_-0sg::_-3ko
+com.sulake.habbo.room.object.logic.furniture:FurnitureRoomBackgroundColorLogic	_-2mk::_-0we
+com.sulake.habbo.room.object.logic.furniture:FurnitureRoomBackgroundLogic	_-2mk::_-Os
+com.sulake.habbo.room.object.visualization.room:RoomVisualization	_-0WW::_-19R
+com.sulake.habbo.ui:RoomDesktop	_-pp::_-2W2
+loginpatch:HabboTicketLogin	loginpatch::HabboTicketLogin

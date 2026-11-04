@@ -1,0 +1,43 @@
+Retained69 methods: 37895
+
+Changed methods:
+com.sulake.core.communication.messages:MessageClassManager|I1:_-2aE
+com.sulake.habbo.chat.discussion.data:ChatItem|constructor
+com.sulake.habbo.chat.history:ChatHistoryItemRenderer|I1:commitData
+com.sulake.habbo.chat.input:ChatInput|I1:_-1P1
+com.sulake.habbo.chat.input:ChatInput|I1:dispose
+com.sulake.habbo.profile.avatar.slot:BadgeSelector|I1:_-3yA
+com.sulake.habbo.profile.avatar.slot:BadgeSelector|I1:_-4AP
+com.sulake.habbo.profile.avatar.slot:BadgeSelector|I1:dispose
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I1:_-41D
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I1:_-4Bl
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I1:dispose
+com.sulake.habbo.ui:RoomDesktop|I1:useObject
+com.sulake.room.renderer:RoomTouchHandler|I1:_-0PU
+com.sulake.room.renderer:RoomTouchHandler|I1:_-1FL
+com.sulake.room.renderer:RoomTouchHandler|I1:dispose
+com.sulake.room.renderer:RoomTouchHandler|constructor
+loginpatch:ClientSettings63|S1:beforeCommand
+loginpatch:ClientSettings63|S1:open
+loginpatch:ClientSettings63|S1:persist
+loginpatch:ClientSettings63|S1:values
+loginpatch:ClientSettings63|initializer
+loginpatch:HabboTicketLogin|S1:resetAccountState
+loginpatch:RoomUI68|S1:refresh
+loginpatch:Text68|initializer
+
+Added methods:
+com.sulake.habbo.chat.history:ChatHistoryItemRenderer|I1:dispose
+com.sulake.habbo.chat.input:ChatInput|I1:chatPickStyle70
+com.sulake.habbo.chat.input:ChatInput|I2:chatCurrentStyle70
+com.sulake.habbo.chat.input:ChatInput|I2:chatStyleDisposed70
+com.sulake.habbo.chat.input:ChatInput|I2:chatStyleItems70
+com.sulake.habbo.profile.avatar.slot:BadgeSelector|I2:badgeSlot70
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I1:badgeInfo70
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I2:badgeCommunication70
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I2:badgeEditable70
+com.sulake.habbo.profile.avatar.slot:BadgesSlot|I2:badgeManager70
+com.sulake.room.renderer:RoomTouchHandler|I1:tapObjects70
+com.sulake.room.renderer:RoomTouchHandler|I2:singleTapGesture70
+com.sulake.room.renderer:RoomTouchHandler|I2:tapBlocked70
+com.sulake.room.renderer:RoomTouchHandler|I2:tapCanvas70

@@ -1,0 +1,1 @@
+PASS: ownerless legacy event drop reproduced; direct saved callback sends native cancel payload once for expired own offer, retains item on failure until confirmed, accepts retry, removes/counts/resyncs on native server acknowledgement. Sold offers remain protected; redeem control is removed from layout and Earnings instructions appear.

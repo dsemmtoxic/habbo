@@ -1,0 +1,1 @@
+PASS: bundled Plus XML puts background, canvas, then multiply colorizer. Whole-room dimmer tints backdrop; walls-only leaves it independent. Saved RoomLighting63 behavior is retained and verified.

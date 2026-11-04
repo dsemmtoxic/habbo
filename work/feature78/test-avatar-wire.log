@@ -1,0 +1,1 @@
+PASS: native peer setup and ID dispatch reach the saved socket and encoder. The exact click frame matches Air Plus and is flushed by the socket fixture. Stale users and sessions emit nothing.

@@ -1,0 +1,1 @@
+PASS: Teste70 reproduces silent DC and swallowed walking. Saved Teste71 runs the native walk path and exact MoveAvatar payload before a single use in both gesture modes; DC off, avatar hit and builder selection keep native handling. Each typed toggle creates a private self-avatar bubble without chat packets. Short/long gesture separation and persistence retained.

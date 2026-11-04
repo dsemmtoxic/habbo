@@ -1,0 +1,73 @@
+{
+  "checkpoint": 63,
+  "base": 33,
+  "route": "token only",
+  "checks": [
+    {
+      "check": "VerifyToken63",
+      "mode": "door",
+      "log": "work/feature63/test-door.log",
+      "sha256": "903e73f85c753fcdfb26f86fc798e54095dd552ac0ad98cc5a47dbe4241b2e2f"
+    },
+    {
+      "check": "VerifyToken63",
+      "mode": "login",
+      "log": "work/feature63/test-login.log",
+      "sha256": "425f2eda9b4a51d42719f117cab6db2ec232ce0ef445ff059b57c09b1da3fa0b"
+    },
+    {
+      "check": "VerifyToken63",
+      "mode": "settings",
+      "log": "work/feature63/test-settings.log",
+      "sha256": "385bc8cd0d68b4806465b90d27a2e8dae93d4f36d1033b0be5f8366e8fdf2ff8"
+    },
+    {
+      "check": "VerifyToken63",
+      "mode": "lighting",
+      "log": "work/feature63/test-lighting.log",
+      "sha256": "9e94d4b3bcc7ad4890cca26ad081f60b85372fb3672738b8c57e16bde13e6c05"
+    },
+    {
+      "check": "VerifyToken63",
+      "mode": "render",
+      "log": "work/feature63/test-render.log",
+      "sha256": "e99d5f6af05694f111de3d9ef5e490620bf83a3fc5ea25a5e25ef46b245e4fff"
+    },
+    {
+      "check": "AuditToken63",
+      "mode": "audit63",
+      "log": "work/feature63/test-audit63.log",
+      "sha256": "d05a205163068643edc74d492fe66bde8d8206a891178d4f5b4d7c9bfaded801"
+    },
+    {
+      "check": "VerifyConsole62",
+      "mode": "console63",
+      "log": "work/feature63/test-console63.log",
+      "sha256": "ba3ea7d15792cbf96c6fcb09ae30069ac5ea77ecb2de5191c26ccc99a694aefa"
+    },
+    {
+      "check": "VerifyRetained33",
+      "mode": "retained33",
+      "log": "work/feature63/test-retained33.log",
+      "sha256": "07ba51c0fd72a7dd889e87af31272b9c4d8cf2872bca206fe4670de297ea1441"
+    },
+    {
+      "check": "VerifyColorBindings61",
+      "mode": "colorBindings63",
+      "log": "work/feature63/test-colorBindings63.log",
+      "sha256": "98af403f23b8a28e077b2be27db358b945ecc63333eba14aa2a44584f3f00635"
+    }
+  ],
+  "swfSha256": "f7f64f4549dc823b79de2152270919d6b26d99929ad7618b3ca4c47f704647bb",
+  "nativeClasses": 2760,
+  "automaticLoginCallbackPresent": false,
+  "physicalAndroidTested": false,
+  "boundaries": [
+    "Android/GPU rasterization",
+    "Flash event delivery",
+    "Feathers measurement/font rasterization",
+    "live hotel/network",
+    "SharedObject disk flush",
+    "platform focus and texture upload"
+  ]
+}

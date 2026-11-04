@@ -1,0 +1,1 @@
+PASS: executes native navigator menu creation and selection dispatcher. Friends replaces Favorites in the three tabs; Favorites is below Categories; both selections use their original distinct server requests.

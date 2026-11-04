@@ -1,0 +1,10 @@
+{
+  "path": "inputs/Habbo_Android_BaseToken33.zip",
+  "bytes": 26738292,
+  "sha256": "416abe9f00605ab8ed99535ebda962551c297b284dbeda33cf1f668343d863d8",
+  "dexSha256": "3022a54c73fdd803098d471e1e25e2903b34c1cb2bcc265447583804a57ef641",
+  "sourceCarrierApkSha256": "df18a46235f18551aafd033c937c7176b9af845030b8a35ed97f75e40d8df03c",
+  "swf33Sha256": "de8dd00c53bd9ece24563558ce7a19ad6183e94bad2ec651c06fd20f46d3e901",
+  "signerSha256": "35867bcb9b79522df091687a6b2784fa7859dd68121ecb5a452a745735d39aa9",
+  "contents": "Unsigned Android resources/runtime carrier, pre48 callback restored; no HabboTablet.swf or automatic-login adapter."
+}

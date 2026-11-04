@@ -1,0 +1,17 @@
+{
+  "officialScriptUrl": "https://images.habbo.com/habbo-web/america/pt/scripts.f4ce8f82.js",
+  "scriptSha256": "74e22356b5e49f96383a3743adc0705c0baa537385b40f0b10673f8bbebf7c4b",
+  "clientService": "nativeHotelService.start()/stop()",
+  "clientEndpoint": "POST /api/client/clientnative/url",
+  "avatarService": "avatar.select()",
+  "avatarEndpoint": "POST /api/user/avatars/select",
+  "profileService": "Session.user after security.handleForces",
+  "imagerService": "imager.generatePose + getImagerUrl",
+  "pose": "s-2.g-1.d-2.h-2.a-0",
+  "referenceHeadDigestConfirmed": true,
+  "hardwareAccelerationIn64": false,
+  "liveAccountTested": false,
+  "doorMaskDimensions": "RoomPlane._-0WO: existing _-0HZ bitmap dimensions, otherwise left/right length * geometry.scale / 2; native mask offsets/flips and black bounds",
+  "nativeMeshIgnores2DMask": true,
+  "retrievedAt": "2026-11-02"
+}

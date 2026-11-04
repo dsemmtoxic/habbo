@@ -1,0 +1,42 @@
+{
+  "checkpoint": 67,
+  "sourceApk66Sha256": "9ad9d9cc8125849698bc2f8fbf206ce37f72188402c63f38e3aed336ff2c1c46",
+  "officialSiteScript": {
+    "url": "https://images.habbo.com/habbo-web/america/pt/scripts.f4ce8f82.js",
+    "sha256": "74e22356b5e49f96383a3743adc0705c0baa537385b40f0b10673f8bbebf7c4b"
+  },
+  "session": {
+    "authenticatedState": "security.login -> useForce.handleForces -> age status -> Session.create; Session.user/securityLogin observed",
+    "oldFalseNegative": "Authenticated user with residual force values was treated as pending verification",
+    "fix": "Remove force-length authentication gate; observe original official verification promise and preserve backend ticket checks"
+  },
+  "logout": {
+    "nativeRoute": "HMenu -> HabboUI.logout -> CoreComponentContext._-02h -> onEnterFrame -> COMPONENT_EVENT_REBOOT",
+    "oldFailure": "Static _ssoSession stayed true and ignored the new /api/public/info/hello",
+    "fix": "Clear transient SSO/timer/account references before native reboot; keep browser profile/cookies and permanent command preferences"
+  },
+  "entrance": {
+    "oldFailure": "Forced-false _-1Kj moved the entrance avatar into RSC3D_TOP",
+    "fix": "Use native wall visibility flag and native entrance classification/RSC3D_DOOR rear layer; preserve cleanup branch so no PNG or legacy clip returns",
+    "renderCodeUnchanged": true,
+    "meshOpeningUnchanged": true
+  },
+  "console": {
+    "oldFailure": "Clock row overlaps the fixed bottom/tail section of the nine-slice bubble",
+    "fix": "Place row after measured text and reserve original bottom inset; scale clock font with message font",
+    "sampledBackgrounds": {
+      "sent": "#6f7085",
+      "received": "#cfcfd7"
+    },
+    "clockColors": {
+      "sent": "#f8f9fc",
+      "received": "#39434f"
+    },
+    "contrast": {
+      "sent": 4.604,
+      "received": 6.489
+    }
+  },
+  "physicalAndroidTested": false,
+  "liveAccountTested": false
+}

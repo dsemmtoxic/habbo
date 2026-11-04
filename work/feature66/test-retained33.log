@@ -1,0 +1,8 @@
+PASS: Teste32 reproduces hiders hiding themselves/each other. Teste33 keeps all hiders rendered and clickable under normal, overlapping and inverted areas, while the controller still toggles only opted-in hiders immediately.
+REPRODUCED Teste32: 200 loaded dependencies -> 136 native asset disposals; only 12/40 figures immediately ready after reentry.
+PASS: Actual native renderer purge, asset-library state transitions and figure dependency readiness retain 200 recently used libraries for 40 fixture figures across two room exits; all 40 remain ready without a missing-library request. Ten-minute expiry still disposes all unused dependencies. Network/GPU timing is not simulated.
+PASS: Five simulated memory levels bound the avatar LRU to 256/128/64/0 libraries, retain newest dependencies, preserve mandatory and loading libraries, and permit explicit forced cleanup. Furniture cache policy remains unchanged.
+PASS: Native managed-mask callbacks bind the correct plane parser. Rebuilt geometry clips floor thickness and wall caps as well as top faces; hidden rim/cap fixtures are removed, visible floor remains, and OFF restores it.
+PASS: Repeated hide/show/hide updates use the saved native SortableImage alpha setter immediately, and visibility changes invalidate the native cached model id while unchanged frames retain the original fast path.
+PASS: Native return button -> own-list event -> controller -> catalog -> composer sends the exact offer id; own returns stay enabled, successful server acknowledgement removes/counts/resyncs the offer, and pooled sold-to-expired rows restore their return button.
+PASS: retained33 hider/controller behavior, cache, clipped floors, immediate invisible-mobi updates and marketplace callbacks verified.

@@ -1,0 +1,6 @@
+com.sulake.habbo.room.events:RoomEngineHSLColorEnableEvent	_-0sg::_-nU
+com.sulake.habbo.room.events:RoomObjectHSLColorEnableEvent	_-0sg::_-4RT
+com.sulake.habbo.room.messages:RoomObjectDataUpdateMessage	_-0gs::_-Pr
+com.sulake.habbo.room.object.data:IntArrayStuffData	_-0VW::_-1Gb
+com.sulake.habbo.ui:MainViewManager	_-pp::_-2o9
+com.sulake.room.object:RoomObjectModel	_-1iL::_-su

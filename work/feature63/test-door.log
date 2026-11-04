@@ -1,0 +1,1 @@
+PASS: executes actual3D door image/clip cleanup, including pre-existing image and repeated updates. Entire RoomPlaneParser restored bytecode-equivalent to33 (left/right wall outline), native90/180 entrance/world heights unchanged. GPU wall rasterization remains a device boundary.

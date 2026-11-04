@@ -1,0 +1,34 @@
+
+
+code
+   getlocal0
+   pushscope
+   getlex QName(ProtectedNamespace("feathers.controls.renderers:LayoutGroupListItemRenderer"),"_-0SL")
+   getlex QName(PackageNamespace("_-20o"),"_-2uW")
+   astypelate
+   coerce QName(PackageNamespace("_-20o"),"_-2uW")
+   setlocal1
+   getlex QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-3i2")
+   getlocal1
+   getproperty QName(PackageNamespace(""),"message")
+   setproperty QName(PackageNamespace(""),"text")
+   getlocal1
+   getproperty QName(PackageNamespace(""),"type")
+   convert_i
+   pushint 1
+   subtract_i
+   lookupswitch ofs0054, [ofs0031, ofs003e, ofs004b, ofs004b, ofs004b]
+ofs0031:
+   findpropstrict QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-2pP")
+   callpropvoid QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-2pP"), 0
+   jump ofs0054
+ofs003e:
+   findpropstrict QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-4VG")
+   callpropvoid QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-4VG"), 0
+   jump ofs0054
+ofs004b:
+   findpropstrict QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-0zu")
+   callpropvoid QName(PrivateNamespace("com.sulake.habbo.messenger.view:ConversationMessageItemRenderer"),"_-0zu"), 0
+ofs0054:
+   returnvoid
+end ; code

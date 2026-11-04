@@ -1,0 +1,11 @@
+{
+  "checkpoint": 62,
+  "cleanSourceCompilation": true,
+  "precompiledJavaClassesProvided": false,
+  "javaSourceFiles": 47,
+  "swfBuildReproducesDeliveredBytes": true,
+  "swfSha256": "1821987ac87dfa5d9948ee5316b0f2ab270ec04630017a18a1f4db9130748585",
+  "externalBuildTools": "Pinned FFDec with lib and flashlib; no prior project classes",
+  "verification": "The rebuilt SWF is byte-identical to the SWF approved by six suites and embedded in signed APK62.",
+  "physicalAndroidTested": false
+}

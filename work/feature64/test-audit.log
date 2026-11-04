@@ -1,0 +1,1 @@
+PASS: 37678 existing non-helper methods preserved; exactly 3 existing methods changed, two read-only getters and one browser helper added. Original33 door-mask handler and wall/floor tracing restored; native login/auth, protocol headers, all other gameplay and persistent commands preserved. AVM2 offsets valid.

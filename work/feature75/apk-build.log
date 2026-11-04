@@ -1,0 +1,6 @@
+Signed: APK v1 (SHA256/RSA) and v2 (SHA256/RSA)
+Output: /workspace/scratch/a8c4e473c834/project/output/Habbo_2.32.40_Teste75_Base33.apk
+Size: 32671614
+SHA256: c6dc08cd15ad796d53987ab6e5fa75f91f63d992a2636dc67d232b669d12efcd
+PASS: Teste33 game code plus scoped75 room asset scheduling; hardware-accelerated WebView enabled, session storage and scoped JavaScript evaluation applied, resources/permissions/fullscreen retained; final embedded SWF exact.
+{"checkpoint": 75, "base": 33, "route": "official-site browser session or manual launcher token", "apk": "/workspace/scratch/a8c4e473c834/project/output/Habbo_2.32.40_Teste75_Base33.apk", "bytes": 32671614, "sha256": "c6dc08cd15ad796d53987ab6e5fa75f91f63d992a2636dc67d232b669d12efcd", "androidVersionName": "2.32.40-t75-b33", "androidVersionCode": 2032174, "airVersion": "2.32.174", "swfSha256": "feba16b3a45f5792768c7cca3cb9e558fbd32aaa246112c47258f1a13d597b7d", "signerSha256": "35867bcb9b79522df091687a6b2784fa7859dd68121ecb5a452a745735d39aa9", "changedCarrierEntries": ["AndroidManifest.xml", "assets/META-INF/AIR/application.xml", "classes.dex"], "changedFromTeste74": ["AndroidManifest.xml", "assets/HabboTablet.swf", "assets/META-INF/AIR/application.xml"], "hardwareAccelerationEnabled": true, "physicalAndroidTested": false, "liveHotelTested": false}

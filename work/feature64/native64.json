@@ -1,0 +1,10 @@
+{
+  "source": "work/native64/AndroidWebView.smali",
+  "changedMethods": [
+    "<init>()V",
+    "destroyInternals()V"
+  ],
+  "sha256": "78baf08bcc9717b19ade48717b01d011712e900b21bc798615ff4936501f4021",
+  "otherDexFiles": "kept byte-for-byte from Base33",
+  "sessionCookiesCleared": false
+}

@@ -1,0 +1,14 @@
+Retained73 methods: 37993
+
+Changed methods:
+com.sulake.habbo.widgets.actions:ObjectActionsCtrl|I1:_-0wY
+com.sulake.habbo.widgets.actions:ObjectActionsCtrl|I1:_-3Au
+com.sulake.habbo.widgets.furni.friendFurni:EncravingView|I1:_-2n4
+com.sulake.habbo.widgets.selector:ObjectSelector|I1:_-3xi
+loginpatch:RoomUse70|S1:present
+loginpatch:RoomUse70|S1:showPresent
+
+Added methods:
+com.sulake.habbo.ui:RoomDesktop|I1:showFurnitureMenu74
+com.sulake.habbo.widgets:WidgetController|I1:showFurnitureMenu74
+loginpatch:RoomUse70|S1:readChosen74

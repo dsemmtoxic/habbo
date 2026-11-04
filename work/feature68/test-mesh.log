@@ -1,0 +1,1 @@
+PASS: actual saved RoomPlaneGeometry hooks cut native-mask-sized door holes in both wall orientations; triangle area and UV continuity verified; floor/window/unmasked geometry retained. Shadow PNG remains disabled by existing33 regression.

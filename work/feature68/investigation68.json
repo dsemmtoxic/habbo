@@ -1,0 +1,81 @@
+{
+  "checkpoint": 68,
+  "base": 33,
+  "source67ApkSha256": "918242eeb41a5ee6deadc07fb7f93eec83236625a36d74b991daf7d68a80d1fc",
+  "door": {
+    "realUserFeedback": "67 avatar still drawn over the doorway wall",
+    "composition": "Away3D wall mesh and Starling avatar sprites are separate render passes; rear Starling layer alone does not cut its pixels",
+    "fix": "Project the same native door-mask UV bounds/world plane into a Starling stencil polygon, attach to entrance layer and reuse unchanged projection",
+    "shadowPNG": false,
+    "nativeWallAndFurnitureOrderRetained": true,
+    "disposedPlaneAccessor": true,
+    "nativeStencilBuffer": "Stage3DProxy default _-I4 is true"
+  },
+  "login": {
+    "leftBrandingHidden": true,
+    "serverCentered": true,
+    "settingsInStageCornerLoginOnly": true,
+    "hotels": [
+      "pt",
+      "en",
+      "de",
+      "fr",
+      "es",
+      "it",
+      "nl",
+      "fi",
+      "tr"
+    ],
+    "localizedRows": 52
+  },
+  "glyphs": {
+    "displayOnly": true,
+    "symbols": [
+      "|",
+      "•",
+      "¥",
+      "—",
+      "÷",
+      "ª",
+      "º"
+    ],
+    "afterNativePluralAndParameterProcessing": true,
+    "payloadsAndTokensUnchanged": true
+  },
+  "navigator": {
+    "topTabs": [
+      "own rooms",
+      "rooms where friends are",
+      "history"
+    ],
+    "sidebar": [
+      "rooms",
+      "all rooms",
+      "categories",
+      "favorites",
+      "create room",
+      "create event"
+    ],
+    "promotionSearchTypes": [
+      16,
+      17
+    ],
+    "titleField": "GuestRoomData._-2wn = Air Plus roomAdName",
+    "durationField": "GuestRoomData._-L9 = Air Plus roomAdExpiresInMin",
+    "details": "two lines below existing room statistics",
+    "liveEventUpdates": "RoomEventData + native NavigatorData._-1Sf setter",
+    "protocolParsingUnchanged": true
+  },
+  "market": {
+    "requestHeader": 92,
+    "responseHeader": 1704,
+    "headersMatchBundledAirPlus": true,
+    "legacyBehavior": "row callback delegates through owner list and can drop when owner is absent; acknowledgement helper immediately refreshes own list",
+    "fix": "bind current offer directly to native cancellation, wait for acknowledgement, allow retry after failure/timeout, remember confirmed returns per logic to filter stale snapshots",
+    "soldStatus2NeverCanceled": true,
+    "redeemControlRemovedFromLayout": true,
+    "collectionHint": "H menu, Earnings"
+  },
+  "physicalAndroidTested": false,
+  "liveHotelTested": false
+}

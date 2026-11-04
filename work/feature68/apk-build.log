@@ -1,0 +1,6 @@
+Signed: APK v1 (SHA256/RSA) and v2 (SHA256/RSA)
+Output: /workspace/scratch/a8c4e473c834/project/output/Habbo_2.32.33_Teste68_Base33.apk
+Size: 32655109
+SHA256: 11934bc3afacee284c4c14f9fda5a4bbd89af6a1cb3818de3f873194e73e2717
+PASS: Teste33 game code plus scoped68 doorway/login/localization/navigator/market fixes; hardware-accelerated WebView enabled, session storage and scoped JavaScript evaluation applied, resources/permissions/fullscreen retained; final embedded SWF exact.
+{"checkpoint": 68, "base": 33, "route": "official-site browser session or manual launcher token", "apk": "/workspace/scratch/a8c4e473c834/project/output/Habbo_2.32.33_Teste68_Base33.apk", "bytes": 32655109, "sha256": "11934bc3afacee284c4c14f9fda5a4bbd89af6a1cb3818de3f873194e73e2717", "androidVersionName": "2.32.33-t68-b33", "androidVersionCode": 2032167, "airVersion": "2.32.167", "swfSha256": "6409f5b8b147bc662206d9d23df2d09d9ea44c637cd9a6e3aaa177818a4eb92f", "signerSha256": "35867bcb9b79522df091687a6b2784fa7859dd68121ecb5a452a745735d39aa9", "changedCarrierEntries": ["AndroidManifest.xml", "assets/META-INF/AIR/application.xml", "classes.dex"], "hardwareAccelerationEnabled": true, "physicalAndroidTested": false, "liveHotelTested": false}

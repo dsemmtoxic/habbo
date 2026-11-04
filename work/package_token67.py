@@ -1,0 +1,99 @@
+"""Package the active Base33 branch and the Teste67 delta with original paths."""
+from pathlib import Path
+import hashlib
+import json
+import re
+import zipfile
+
+root = Path(__file__).resolve().parents[1]
+folder = root / 'work/feature67'
+release = json.loads((folder / 'release67.json').read_text())
+validation = json.loads((folder / 'validation67.json').read_text())
+assert release['checkpoint'] == validation['checkpoint'] == 67
+assert release['base'] == validation['base'] == 33
+assert release['androidVersionName'] == '2.32.32-t67-b33'
+assert release['androidVersionCode'] == 2032166
+assert release['signerSha256'] == '35867bcb9b79522df091687a6b2784fa7859dd68121ecb5a452a745735d39aa9'
+expected_checks = {
+    'audit', 'browser-script', 'colorBindings', 'console', 'entrance',
+    'lighting', 'login', 'logout', 'mesh', 'native-2760-class-roundtrip',
+    'render', 'retained33', 'settings', 'startup-types',
+}
+assert len(validation['checks']) == 14
+assert {row['check'] for row in validation['checks']} == expected_checks
+assert validation['swfSha256'] == release['swfSha256']
+assert not validation['physicalAndroidTested'] and not validation['liveHotelTested']
+apk = root / 'output/Habbo_2.32.32_Teste67_Base33.apk'
+assert hashlib.sha256(apk.read_bytes()).hexdigest() == release['sha256']
+assert apk.stat().st_size == release['bytes']
+assert hashlib.sha256((root / 'work/HabboTablet_Token67_Base33.swf').read_bytes()).hexdigest() == release['swfSha256']
+for check in validation['checks']:
+    log = (root / check['log']).read_bytes()
+    assert hashlib.sha256(log).hexdigest() == check['sha256']
+    assert b'PASS:' in log and b'Exception in thread' not in log
+signature = (folder / 'apk-signature.log').read_text()
+assert 'PASS:' in signature and 'Warnings: []' in signature
+assert release['signerSha256'] in signature
+assert (root / 'work/PROGRESSO_INTEGRACAO_NATIVA.md').read_text().startswith('# Teste67 / Base33')
+
+delta = [
+    'work/AuditToken67.java',
+    'work/Console61.as',
+    'work/HabboTablet_Token67_Base33.swf',
+    'work/PatchToken67.java',
+    'work/PROGRESSO_INTEGRACAO_NATIVA.md',
+    'work/README_TOKEN67.md',
+    'work/VerifyToken67.java',
+    'work/WebSession64.as',
+    'work/build_token67.sh',
+    'work/make_token_apk67.py',
+    'work/package_token67.py',
+    'work/regression_token67.py',
+    'work/session64.js',
+    'work/test_session67.js',
+    'work/feature67/release67.json',
+    'work/feature67/validation67.json',
+    'work/feature67/investigation67.json',
+    'work/feature67/site-source67.json',
+    'work/feature67/session66-reference.js',
+    'work/feature67/build.log',
+    'work/feature67/compile.log',
+    'work/feature67/tests-compile.log',
+    'work/feature67/apk-build.log',
+    'work/feature67/apk-signature.log',
+    'work/feature67/package-plan67.json',
+]
+delta += [row['log'] for row in validation['checks'] if row['log'].startswith('work/feature67/')]
+previous = json.loads((root / 'work/feature66/package-plan66.json').read_text())
+plan = {'full': sorted(set(previous['full'] + delta)), 'delta': sorted(set(delta))}
+(folder / 'package-plan67.json').write_text(json.dumps(plan, indent=2) + '\n')
+results = []
+for kind, filename in [
+    ('full', 'Habbo_Token67_Base33_Fontes.zip'),
+    ('delta', 'Habbo_Teste67_Base33_Alteracoes.zip'),
+]:
+    records = []
+    for name in plan[kind]:
+        assert not Path(name).is_absolute() and '..' not in Path(name).parts
+        assert not re.search(r'(?:signing-key|signing-cert|Assinatura_Privada|NativeAir|AuthSession34)', name, re.I)
+        data = (root / name).read_bytes()
+        records.append({'path': name, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+    manifest = {'checkpoint': 67, 'base': 33, 'route': release['route'], 'kind': kind, 'files': records}
+    output = root / 'output' / filename
+    with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+        for row in records:
+            info = zipfile.ZipInfo(row['path'], (2026, 11, 2, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = (0o100755 if row['path'].endswith('.sh') else 0o100644) << 16
+            archive.writestr(info, (root / row['path']).read_bytes())
+        archive.writestr('PACKAGE_MANIFEST_TOKEN67.json', json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
+    with zipfile.ZipFile(output) as archive:
+        assert archive.testzip() is None
+        assert len(archive.namelist()) == len(set(archive.namelist())) == len(records) + 1
+        for row in records:
+            assert hashlib.sha256(archive.read(row['path'])).hexdigest() == row['sha256']
+    result = {'kind': kind, 'filename': filename, 'bytes': output.stat().st_size,
+              'sha256': hashlib.sha256(output.read_bytes()).hexdigest(), 'entries': len(records) + 1}
+    results.append(result)
+    print('PASS: ' + json.dumps(result), flush=True)
+(folder / 'archives67.json').write_text(json.dumps(results, indent=2) + '\n')

@@ -1,0 +1,1 @@
+PASS: native peer setup sends only LookTo, explicit click sends the room-object ID with Air Plus header 2515, stale peers send nothing, and Wired content omits the description.

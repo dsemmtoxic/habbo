@@ -1,0 +1,11 @@
+{
+  "mainDexClasses": 2760,
+  "roundTripAllClasses": true,
+  "changedOriginalMethods": [
+    "public constructor <init>()V",
+    "public destroyInternals()V",
+    "public loadURL(Ljava/lang/String;)V"
+  ],
+  "sha256": "64da4daf9ad0434f8ec0a1f09a49af392ef4f2f1bfc32733dbd3ca2540c41d15",
+  "otherDexFiles": "packager retains original bytes"
+}

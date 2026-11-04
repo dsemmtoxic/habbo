@@ -1,0 +1,15 @@
+Retained71 methods: 37974
+
+Changed methods:
+com.sulake.room.renderer:RoomTouchHandler|I1:_-4VQ
+loginpatch:RoomUse70|S1:present
+loginpatch:RoomUse70|S1:presentEvent
+loginpatch:RoomUse70|S1:presentRequest
+loginpatch:RoomUse70|S1:showPresent
+loginpatch:RoomUse70|S1:singleTap
+loginpatch:Text68|initializer
+
+Added methods:
+loginpatch:RoomUse70|S1:readTap
+loginpatch:RoomUse70|S1:readTrophy
+loginpatch:RoomUse70|S1:tappedFurniture

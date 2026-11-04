@@ -1,0 +1,21 @@
+{
+  "checkpoint": 73,
+  "base": 33,
+  "route": "official-site browser session or manual launcher token",
+  "apk": "/workspace/scratch/a8c4e473c834/project/output/Habbo_2.32.38_Teste73_Base33.apk",
+  "bytes": 32669741,
+  "sha256": "5bcd9e778d9a61ebe21fe783739cfb0f1394593d663f3db942269ed00e6df60d",
+  "androidVersionName": "2.32.38-t73-b33",
+  "androidVersionCode": 2032172,
+  "airVersion": "2.32.172",
+  "swfSha256": "0c73cfec63f6a8dc8546f21cae2a6bf7392fa393a90107a3ec0df07a48e98814",
+  "signerSha256": "35867bcb9b79522df091687a6b2784fa7859dd68121ecb5a452a745735d39aa9",
+  "changedCarrierEntries": [
+    "AndroidManifest.xml",
+    "assets/META-INF/AIR/application.xml",
+    "classes.dex"
+  ],
+  "hardwareAccelerationEnabled": true,
+  "physicalAndroidTested": false,
+  "liveHotelTested": false
+}

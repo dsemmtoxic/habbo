@@ -1,0 +1,340 @@
+
+
+code
+   getlocal0
+   pushscope
+   newactivation
+   dup
+   setlocal2
+   pushscope
+   findpropstrict QName(PackageInternalNs("_-pp"),"event")
+   getlocal1
+   setproperty QName(PackageInternalNs("_-pp"),"event")
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_-3Wh")
+   not
+   dup
+   iftrue ofs001b
+   pop
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_-3x9")
+   not
+ofs001b:
+   dup
+   iftrue ofs0025
+   pop
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_-4ZL")
+   convert_b
+ofs0025:
+   dup
+   iftrue ofs002f
+   pop
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_-dR")
+   convert_b
+ofs002f:
+   dup
+   iftrue ofs0038
+   pop
+   getlex QName(PackageNamespace(""),"disposed")
+   convert_b
+ofs0038:
+   iffalse ofs003d
+   returnvoid
+ofs003d:
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"type")
+   setlocal3
+   jump ofs02b5
+ofs0047:
+   label
+   findpropstrict QName(PackageNamespace(""),"_-22y")
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"objectId")
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"category")
+   callpropvoid QName(PackageNamespace(""),"_-22y"), 2
+   jump ofs02ef
+ofs0061:
+   label
+   findpropstrict QName(PackageNamespace(""),"_-Nu")
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"objectId")
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"category")
+   callpropvoid QName(PackageNamespace(""),"_-Nu"), 2
+   jump ofs02ef
+ofs007b:
+   label
+   findpropstrict QName(PackageNamespace("_-2xS"),"_-1aX")
+   constructprop QName(PackageNamespace("_-2xS"),"_-1aX"), 0
+   coerce QName(PackageNamespace("_-2xS"),"_-1aX")
+   getlocal2
+   swap
+   setslot 6
+   getlex QName(PackageInternalNs("_-pp"),"icon")
+   findpropstrict QName(PackageNamespace(""),"getProperty")
+   pushstring "image.library.url"
+   callproperty QName(PackageNamespace(""),"getProperty"), 1
+   pushstring "client_static/frank1.png"
+   add
+   setproperty QName(PackageNamespace(""),"source")
+   findpropstrict QName(PackageNamespace("_-1Ab"),"_-nO")
+   pushstring "label"
+   pushstring "${infostand.button.use}"
+   pushstring "triggered"
+   newfunction 5524
+   newobject 2
+   pushstring "label"
+   pushstring "${generic.cancel}"
+   newobject 1
+   newarray 2
+   constructprop QName(PackageNamespace("_-1Ab"),"_-nO"), 1
+   coerce QName(PackageNamespace("_-1Ab"),"_-nO")
+   getlocal2
+   swap
+   setslot 7
+   getlex QName(PackageNamespace("_-2xS"),"Alert")
+   pushstring "${effectbox.header.description}"
+   pushstring "${effectbox.header.title}"
+   getlex QName(PackageInternalNs("_-pp"),"buttons")
+   getlex QName(PackageInternalNs("_-pp"),"icon")
+   callpropvoid QName(PackageNamespace(""),"show"), 4
+   jump ofs02ef
+ofs00db:
+   label
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getlex QName(PackageNamespace("_-0sg"),"_-37J")
+   astypelate
+   coerce QName(PackageNamespace("_-0sg"),"_-37J")
+   getlocal2
+   swap
+   setslot 2
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   pushnull
+   equals
+   not
+   dup
+   iffalse ofs00fc
+   pop
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_roomEngine")
+   pushnull
+   equals
+   not
+ofs00fc:
+   iffalse ofs0197
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_roomEngine")
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"roomId")
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"objectId")
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"category")
+   callproperty QName(Namespace("com.sulake.habbo.room:IRoomEngine"),"_-46h"), 3
+   coerce QName(PackageNamespace("_-1iL"),"_-Ro")
+   getlocal2
+   swap
+   setslot 5
+   getlex QName(PackageInternalNs("_-pp"),"roomObject")
+   pushnull
+   ifeq ofs0197
+   getlex QName(PackageInternalNs("_-pp"),"roomObject")
+   callproperty QName(Namespace("com.sulake.room.object:IRoomObject"),"getModel"), 0
+   coerce QName(PackageNamespace("_-1iL"),"_-va")
+   getlocal2
+   swap
+   setslot 4
+   getlex QName(PackageInternalNs("_-pp"),"model")
+   pushstring "furniture_data"
+   callproperty QName(Namespace("com.sulake.room.object:IRoomObjectModel"),"getStringToStringMap"), 1
+   pushstring "internalLink"
+   callproperty QName(PackageNamespace(""),"getValue"), 1
+   coerce_s
+   getlocal2
+   swap
+   setslot 3
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   pushnull
+   equals
+   dup
+   iftrue ofs0161
+   pop
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   getproperty QName(PackageNamespace(""),"length")
+   pushbyte 0
+   equals
+ofs0161:
+   iffalse ofs0175
+   getlex QName(PackageInternalNs("_-pp"),"model")
+   pushstring "furniture_internal_link"
+   callproperty QName(Namespace("com.sulake.room.object:IRoomObjectModel"),"getString"), 1
+   coerce_s
+   getlocal2
+   swap
+   setslot 3
+ofs0175:
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   pushnull
+   equals
+   not
+   dup
+   iffalse ofs0189
+   pop
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   getproperty QName(PackageNamespace(""),"length")
+   pushbyte 0
+   greaterthan
+ofs0189:
+   iffalse ofs0197
+   getlex QName(PackageNamespace(""),"context")
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   callpropvoid QName(Namespace("com.sulake.core.runtime:IContext"),"createLinkEvent"), 1
+ofs0197:
+   jump ofs02ef
+ofs019b:
+   label
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getlex QName(PackageNamespace("_-0sg"),"_-37J")
+   astypelate
+   coerce QName(PackageNamespace("_-0sg"),"_-37J")
+   getlocal2
+   swap
+   setslot 2
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   pushnull
+   equals
+   not
+   dup
+   iffalse ofs01bc
+   pop
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_roomEngine")
+   pushnull
+   equals
+   not
+ofs01bc:
+   iffalse ofs024b
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_roomEngine")
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"roomId")
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"objectId")
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"category")
+   callproperty QName(Namespace("com.sulake.habbo.room:IRoomEngine"),"_-46h"), 3
+   coerce QName(PackageNamespace("_-1iL"),"_-Ro")
+   getlocal2
+   swap
+   setslot 5
+   getlex QName(PackageInternalNs("_-pp"),"roomObject")
+   pushnull
+   ifeq ofs024b
+   getlex QName(PackageInternalNs("_-pp"),"roomObject")
+   callproperty QName(Namespace("com.sulake.room.object:IRoomObject"),"getModel"), 0
+   coerce QName(PackageNamespace("_-1iL"),"_-va")
+   getlocal2
+   swap
+   setslot 4
+   getlex QName(PackageInternalNs("_-pp"),"model")
+   pushstring "furniture_data"
+   callproperty QName(Namespace("com.sulake.room.object:IRoomObjectModel"),"getStringToStringMap"), 1
+   pushstring "internalLink"
+   callproperty QName(PackageNamespace(""),"getValue"), 1
+   coerce_s
+   getlocal2
+   swap
+   setslot 3
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   pushnull
+   equals
+   dup
+   iftrue ofs0221
+   pop
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   getproperty QName(PackageNamespace(""),"length")
+   pushbyte 0
+   equals
+ofs0221:
+   iffalse ofs0235
+   getlex QName(PackageInternalNs("_-pp"),"model")
+   pushstring "furniture_internal_link"
+   callproperty QName(Namespace("com.sulake.room.object:IRoomObjectModel"),"getString"), 1
+   coerce_s
+   getlocal2
+   swap
+   setslot 3
+ofs0235:
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   pushnull
+   ifeq ofs02ef
+   getlex QName(PackageNamespace(""),"context")
+   pushstring "navigator/goto/"
+   getlex QName(PackageInternalNs("_-pp"),"link")
+   add
+   callpropvoid QName(Namespace("com.sulake.core.runtime:IContext"),"createLinkEvent"), 1
+ofs024b:
+   jump ofs02ef
+ofs024f:
+   label
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getlex QName(PackageNamespace("_-0sg"),"_-37J")
+   astypelate
+   coerce QName(PackageNamespace("_-0sg"),"_-37J")
+   getlocal2
+   swap
+   setslot 2
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   dup
+   iffalse ofs0273
+   pop
+   getlex QName(PackageInternalNs("_-pp"),"widgetEvent")
+   getproperty QName(PackageNamespace(""),"contextMenu")
+   pushstring "FRIEND_FURNITURE"
+   equals
+   coerce_a
+ofs0273:
+   iffalse ofs0285
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_-3x9")
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"objectId")
+   callpropvoid QName(PackageNamespace(""),"_-Oa"), 1
+ofs0285:
+   jump ofs02ef
+ofs0289:
+   label
+   getlex QName(PrivateNamespace("com.sulake.habbo.ui:HabboUI"),"_-3x9")
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   callproperty QName(PackageNamespace(""),"_-0KM"), 1
+   convert_b
+   getlocal2
+   swap
+   setslot 8
+   getlex QName(PackageInternalNs("_-pp"),"handled")
+   iftrue ofs02b1
+   getlex QName(PackageNamespace(""),"Logger")
+   pushstring "[HabboUI] Unhandled Room Object Event: "
+   getlex QName(PackageInternalNs("_-pp"),"event")
+   getproperty QName(PackageNamespace(""),"type")
+   add
+   callpropvoid QName(PackageNamespace(""),"log"), 1
+ofs02b1:
+   jump ofs02ef
+ofs02b5:
+   pushstring "RETWE_REQUEST_MANNEQUIN"
+   getlocal3
+   ifstricteq ofs0047
+   pushstring "ROWRE_REQUEST_PURCHASABLE_CLOTHING_CONFIRMATION_DIALOG"
+   getlocal3
+   ifstricteq ofs0061
+   pushstring "RETWE_REQUEST_EFFECTBOX_OPEN_DIALOG"
+   getlocal3
+   ifstricteq ofs007b
+   pushstring "RETWE_REQUEST_INTERNAL_LINK"
+   getlocal3
+   ifstricteq ofs00db
+   pushstring "RETWE_REQUEST_ROOM_LINK"
+   getlocal3
+   ifstricteq ofs019b
+   pushstring "RETWE_OPEN_FURNI_CONTEXT_MENU"
+   getlocal3
+   ifstricteq ofs024f
+   jump ofs0289
+ofs02ef:
+   returnvoid
+end ; code

@@ -1,0 +1,1 @@
+PASS: transparent login without frame; new skins and white outlined text; eight landscape/portrait sizes; account/token/settings preserved; real switch callback; proportional head sizing and official image host checks. Native font/GPU/OS layout remain device boundaries.

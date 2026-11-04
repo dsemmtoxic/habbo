@@ -1,0 +1,1 @@
+PASS: actual browser script extracts Launcher code, accepts only the chosen hotel and exact HTTPS origin, reads selected-avatar profile, obtains a fresh code and delivers once. Requests are bounded; credentials/cookies are not exported. DOM/network/OS behavior remains a real-device boundary.

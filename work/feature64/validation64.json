@@ -1,0 +1,73 @@
+{
+  "checkpoint": 64,
+  "base": 33,
+  "route": "official-site browser session or manual launcher token",
+  "checks": [
+    {
+      "check": "audit",
+      "log": "work/feature64/test-audit.log",
+      "sha256": "afb6e621decede092174890bd6d83ecea835148d1c931a926aeff7163cdb824a"
+    },
+    {
+      "check": "browser-script",
+      "log": "work/feature64/test-browser-script.log",
+      "sha256": "1cc1b58fdea51f065a9e9cfe3e935054c66d035684334c1c643ffc5b22097fbd"
+    },
+    {
+      "check": "colorBindings",
+      "log": "work/feature64/test-colorBindings.log",
+      "sha256": "98af403f23b8a28e077b2be27db358b945ecc63333eba14aa2a44584f3f00635"
+    },
+    {
+      "check": "console",
+      "log": "work/feature64/test-console.log",
+      "sha256": "2de6b3269de05da5f1d211447956b4b1b9feedc6477e64cb02bc05fb1bea6a5d"
+    },
+    {
+      "check": "door",
+      "log": "work/feature64/test-door.log",
+      "sha256": "903e73f85c753fcdfb26f86fc798e54095dd552ac0ad98cc5a47dbe4241b2e2f"
+    },
+    {
+      "check": "lighting",
+      "log": "work/feature64/test-lighting.log",
+      "sha256": "cbeb66c92d9173979a29f7681d1fd18e47a41d268a6582e4e28daa34664d1ae6"
+    },
+    {
+      "check": "login",
+      "log": "work/feature64/test-login.log",
+      "sha256": "e5eb939ae7fd29ddcc26397f9a863e14b83c25b37acdfcbd3fc397a8c12a5700"
+    },
+    {
+      "check": "native-2760-class-roundtrip",
+      "log": "work/feature64/test-native.log",
+      "sha256": "42a782906df37c840d57225b7d079b6fd10afb4d3748de6f23ab00b38928e02f"
+    },
+    {
+      "check": "render",
+      "log": "work/feature64/test-render.log",
+      "sha256": "e99d5f6af05694f111de3d9ef5e490620bf83a3fc5ea25a5e25ef46b245e4fff"
+    },
+    {
+      "check": "retained33",
+      "log": "work/feature64/test-retained33.log",
+      "sha256": "07ba51c0fd72a7dd889e87af31272b9c4d8cf2872bca206fe4670de297ea1441"
+    },
+    {
+      "check": "settings",
+      "log": "work/feature64/test-settings.log",
+      "sha256": "385bc8cd0d68b4806465b90d27a2e8dae93d4f36d1033b0be5f8366e8fdf2ff8"
+    }
+  ],
+  "swfSha256": "823ec8ff01da805a34b367edb6c96c44acb5b864a88382725502933ccd2496f8",
+  "nativeDexSha256": "78baf08bcc9717b19ade48717b01d011712e900b21bc798615ff4936501f4021",
+  "physicalAndroidTested": false,
+  "liveHotelTested": false,
+  "boundaries": [
+    "Android/GPU rasterization",
+    "Feathers font/layout measurement",
+    "operating-system event delivery",
+    "website DOM/API/2FA in a signed-in session",
+    "actual server acknowledgements and disk/cookie persistence"
+  ]
+}

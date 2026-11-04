@@ -1,0 +1,21 @@
+{
+  "reported": "65 remains on loading after selecting country",
+  "cause": "LoginScreen.initializeHandler stores state.title and state.instructions into native slots typed _-2xS::_-Fk (feathers Label);65 replaced both with starling.text::TextField. Assignment throws TypeError1034 before the initialized flag/normal showScreen completion.",
+  "slots": {
+    "_-0ya": "_-2xS::_-Fk",
+    "_-3Nt": "_-2xS::_-Fk"
+  },
+  "fix": "Keep original hidden Label instances and use login62.titleView/instructionsView for the modern text.",
+  "priorTestGap": "Property existence was checked but class-typed slot coercion was not enforced. VerifyToken66 adds native-slot type enforcement to initializeHandler execution.",
+  "startupCases": 8,
+  "headlessEvidence": {
+    "runtime": "Ruffle0.7.1, Chromium153, local isolated probe",
+    "probe": "Equivalent slots populated with the exact native Label class type;65 TextField rejected with1034, native Label accepted. Native graphics and theme also executed. This is not an Android test.",
+    "trace": [
+      "log: TRACE PROBE66 SLOT REJECT TypeError: Error #1034: Type Coercion failed: cannot convert starling.text::TextField@00000000000 to _-2xS._-Fk.",
+      "log: TRACE PROBE66 NATIVE LABEL ACCEPTED"
+    ],
+    "sourceApk65Sha256": "33dcb6ecd8fa92db4fb56409594f507e0dcd2656164ac329e0346bdb462b0a64"
+  },
+  "physicalAndroidTested": false
+}

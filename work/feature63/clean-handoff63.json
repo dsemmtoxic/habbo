@@ -1,0 +1,11 @@
+{
+  "checkpoint": 63,
+  "cleanSourceBuildPassed": true,
+  "cleanBuiltSwfSha256": "f7f64f4549dc823b79de2152270919d6b26d99929ad7618b3ca4c47f704647bb",
+  "releaseSwfSha256": "f7f64f4549dc823b79de2152270919d6b26d99929ad7618b3ca4c47f704647bb",
+  "matchesReleaseBytes": true,
+  "fullFiles": 287,
+  "deltaFiles": 37,
+  "privateSigningMaterialAbsent": true,
+  "externalToolsPinned": "work/feature63/dependencies63.json"
+}

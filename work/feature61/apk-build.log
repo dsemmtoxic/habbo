@@ -1,0 +1,6 @@
+Signed: APK v1 (SHA256/RSA) and v2 (SHA256/RSA)
+Output: /workspace/scratch/365b0ea0e644/rollback33/project/output/Habbo_2.32.26_Teste61_Base33.apk
+Size: 32613075
+SHA256: 3b0a37f5d47035c5d1ea7aaefc8c80cae5a4d00b4cfc595a1ef2c7b84f46091d
+PASS: Teste33 game code plus scoped61 changes; native Android classes restored to pre48, resources/permissions/fullscreen retained; final embedded SWF exact.
+{"checkpoint": 61, "base": 33, "route": "token only", "apk": "/workspace/scratch/365b0ea0e644/rollback33/project/output/Habbo_2.32.26_Teste61_Base33.apk", "bytes": 32613075, "sha256": "3b0a37f5d47035c5d1ea7aaefc8c80cae5a4d00b4cfc595a1ef2c7b84f46091d", "androidVersionName": "2.32.26-t61-b33", "androidVersionCode": 2032160, "airVersion": "2.32.160", "swfSha256": "ed0b5fe3a517f77d4bacedfcdd3119af132e21a43c2a0fbae9ea688e95747bac", "signerSha256": "35867bcb9b79522df091687a6b2784fa7859dd68121ecb5a452a745735d39aa9", "changedCarrierEntries": ["AndroidManifest.xml", "assets/META-INF/AIR/application.xml"], "physicalAndroidTested": false}

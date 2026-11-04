@@ -1,0 +1,1 @@
+PASS: saved door-mask configuration projects the same opening into a real Starling mask for both wall axes, orientations and zooms. Sloping polygon clips pixels beyond the aperture, stable frames reuse it, hidden walls/removed masks release it. GPU stencil rasterization remains a device boundary.

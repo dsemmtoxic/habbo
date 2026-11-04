@@ -1,0 +1,1 @@
+PASS: all 2760 main-dex classes reassemble and disassemble without semantic drift. Only AndroidWebView constructor/storage policy and cookie flush differ from original33; no added JavaScript native interface, TLS bypass or cookie deletion.

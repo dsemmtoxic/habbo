@@ -1,0 +1,88 @@
+{
+  "checkpoint": 67,
+  "base": 33,
+  "route": "official-site browser session or manual launcher token",
+  "checks": [
+    {
+      "check": "audit",
+      "log": "work/feature67/test-audit.log",
+      "sha256": "38a2580ca57908d4ac19e3c62446d8a6048ac8ef3deae64702e2b2ef20935320"
+    },
+    {
+      "check": "browser-script",
+      "log": "work/feature67/test-browser-script.log",
+      "sha256": "8e03a4a3beb76232493eede5fd84fabe01dc0c2e4972ca6de606493d87046a65"
+    },
+    {
+      "check": "colorBindings",
+      "log": "work/feature67/test-colorBindings.log",
+      "sha256": "98af403f23b8a28e077b2be27db358b945ecc63333eba14aa2a44584f3f00635"
+    },
+    {
+      "check": "console",
+      "log": "work/feature67/test-console.log",
+      "sha256": "5c550eebdf1c507a660bd25c929bc782046aaf8ad3645f4cd42339d1908650b7"
+    },
+    {
+      "check": "entrance",
+      "log": "work/feature67/test-entrance.log",
+      "sha256": "62819af203d0384b078ffc0a2c853da1f45ec80b8b052e9ad097d5f5e6c7884f"
+    },
+    {
+      "check": "lighting",
+      "log": "work/feature67/test-lighting.log",
+      "sha256": "d6859df14316b2552314d034549e0803988e2928946b8b17065a14f36ab6121b"
+    },
+    {
+      "check": "login",
+      "log": "work/feature67/test-login.log",
+      "sha256": "272de3add764c2b5e1be3b63acbd25e89750cfa6636d14659811cd8b3396f345"
+    },
+    {
+      "check": "logout",
+      "log": "work/feature67/test-logout.log",
+      "sha256": "268fe6b4d28f4ee3f7b3a4cc9712f6be6c12d36f52c72e2b2c98d862cb88a0f7"
+    },
+    {
+      "check": "mesh",
+      "log": "work/feature67/test-mesh.log",
+      "sha256": "0a8c863d4dafc10f5de6ca83e053c02ae6753d3f70121f59441fd78aad63652c"
+    },
+    {
+      "check": "native-2760-class-roundtrip",
+      "log": "work/feature65/test-native.log",
+      "sha256": "d46f50a8480958b208936a1f83f5fadc99426640d1eea60bc5082f67f154f0a5"
+    },
+    {
+      "check": "render",
+      "log": "work/feature67/test-render.log",
+      "sha256": "e99d5f6af05694f111de3d9ef5e490620bf83a3fc5ea25a5e25ef46b245e4fff"
+    },
+    {
+      "check": "retained33",
+      "log": "work/feature67/test-retained33.log",
+      "sha256": "07ba51c0fd72a7dd889e87af31272b9c4d8cf2872bca206fe4670de297ea1441"
+    },
+    {
+      "check": "settings",
+      "log": "work/feature67/test-settings.log",
+      "sha256": "385bc8cd0d68b4806465b90d27a2e8dae93d4f36d1033b0be5f8366e8fdf2ff8"
+    },
+    {
+      "check": "startup-types",
+      "log": "work/feature67/test-startup-types.log",
+      "sha256": "07118a465aca218713a35a806511816c425f76618c9fb4bd554a53d14beebbd4"
+    }
+  ],
+  "swfSha256": "46022c7413a83a69e9a946eb63f4edd19691bdb64d64bad997a5b1f17ff5a185",
+  "nativeDexSha256": "64da4daf9ad0434f8ec0a1f09a49af392ef4f2f1bfc32733dbd3ca2540c41d15",
+  "physicalAndroidTested": false,
+  "liveHotelTested": false,
+  "boundaries": [
+    "Android/GPU rasterization",
+    "Feathers font/layout measurement",
+    "operating-system event delivery",
+    "website services/2FA in a signed-in session",
+    "actual server acknowledgements and disk/cookie persistence"
+  ]
+}

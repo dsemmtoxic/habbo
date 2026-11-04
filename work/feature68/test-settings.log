@@ -1,0 +1,1 @@
+PASS: all six switches persist before login; native AFK timer, typing and trade flags apply on room bind without duplicate timers/alerts; reset/reconnect and simulated new process retain choices. Typed commands persist, bot/pet categories mute and human/unknown user chats remain allowed.

@@ -1,0 +1,12 @@
+{
+  "checkpoint": 80,
+  "checks": [
+    "avatar-wire",
+    "builder-and-menu",
+    "asset-performance",
+    "native-retained"
+  ],
+  "swfSha256": "b5fd1e5e58df7714fd8a57f140107572341672fe9aa183f77ef5744875d3b5f5",
+  "physicalAndroidTested": false,
+  "liveHotelTested": false
+}

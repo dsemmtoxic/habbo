@@ -1,0 +1,16 @@
+JPEXS Free Flash Decompiler v.26.4.0
+------------------------------------
+Exporting scripts...
+Exported script 5/11 com.sulake.habbo.communication.messages.outgoing.room.furniture.SetRoomBackgroundColorDataComposer, 00:00.382
+Exported script 2/11 com.sulake.habbo.communication.messages.parser.friendlist.ConsoleMessageHistoryMessageParser, 00:00.389
+Exported script 1/11 com.sulake.habbo.room.events.RoomEngineRoomColorEvent, 00:00.391
+Exported script 3/11 com.sulake.habbo.room.object.logic.furniture.FurnitureRoomBackgroundColorLogic, 00:00.430
+Exported script 6/11 com.sulake.habbo.ui.handler.FurnitureBackgroundColorWidgetHandler, 00:00.432
+Exported script 8/11 com.sulake.habbo.communication.messages.incoming.friendlist.ConsoleMessageHistoryEvent, 00:00.109
+Exported script 9/11 com.sulake.habbo.room.messages.RoomObjectRoomColorUpdateMessage, 00:00.108
+Exported script 11/11 com.sulake.habbo.ui.IRoomDesktop, 00:00.072
+Exported script 4/11 com.sulake.habbo.ui.widget.furniture.backgroundcolor.BackgroundColorWidgetSlider, 00:00.521
+Exported script 10/11 com.sulake.habbo.ui.widget.furniture.backgroundcolor.BackgroundColorFurniWidget, 00:00.155
+Exported script 7/11 com.sulake.habbo.ui.RoomDesktop, 00:00.724
+Export finished. Total export time: 00:03.352
+OK

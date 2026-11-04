@@ -1,0 +1,1 @@
+PASS: executes native entrance state and exact render classification/reparenting fragments. Both90/180 entries use the native rear layer while walls are visible; furniture/interior avatars keep normal sorting, walking inside restores it, hidden walls disable it. Door PNG/legacy clip stay absent; mesh opening retained by separate geometry regression.

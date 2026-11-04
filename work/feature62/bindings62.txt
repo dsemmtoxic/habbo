@@ -1,0 +1,13 @@
+PARENT com.sulake.habbo.ui:HabboUI _-pp::_-0S9
+PARENT com.sulake.core.runtime:Component _-0KT::_-4P2
+
+
+code
+   getlocal0
+   pushscope
+   getlex QName(PrivateNamespace("com.sulake.core.runtime:Component"),"_context")
+   returnvalue
+end ; code
+
+DATA com.sulake.habbo.room.object.data:IntArrayStuffData
+CALL com.sulake.habbo.ui:MainViewManager I1:_-38x

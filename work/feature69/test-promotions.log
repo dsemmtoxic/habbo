@@ -1,0 +1,1 @@
+PASS: saved native guest-room data supplies a full-width single event row, larger font, bold Event prefix and HHhMMmin. No seconds, stable copies, expiry and renderer recycling; fixed pager reserves row height. Font metrics/GPU remain device boundaries.

@@ -1,0 +1,17 @@
+com.sulake.habbo.communication:HabboMessages::_-0up 699=com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceBuyOfferResultEvent
+com.sulake.habbo.communication:HabboMessages::_-0up 1704=com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceCancelOfferResultEvent
+com.sulake.habbo.communication:HabboMessages::_-0up 1871=com.sulake.habbo.communication.messages.incoming.marketplace:MarketPlaceOwnOffersEvent
+com.sulake.habbo.communication:HabboMessages::_-0up 2880=com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceCanMakeOfferResult
+com.sulake.habbo.communication:HabboMessages::_-0up 3230=com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceConfigurationEvent
+com.sulake.habbo.communication:HabboMessages::_-0up 3634=com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceItemStatsEvent
+com.sulake.habbo.communication:HabboMessages::_-0up 3720=com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceMakeOfferResult
+com.sulake.habbo.communication:HabboMessages::_-0up 3877=com.sulake.habbo.communication.messages.incoming.marketplace:MarketPlaceOffersEvent
+com.sulake.habbo.communication:HabboMessages::_-26i 92=com.sulake.habbo.communication.messages.outgoing.marketplace:CancelMarketplaceOfferMessageComposer
+com.sulake.habbo.communication:HabboMessages::_-26i 140=com.sulake.habbo.communication.messages.outgoing.marketplace:RedeemMarketplaceOfferCreditsMessageComposer
+com.sulake.habbo.communication:HabboMessages::_-26i 1525=com.sulake.habbo.communication.messages.outgoing.marketplace:GetMarketplaceItemStatsComposer
+com.sulake.habbo.communication:HabboMessages::_-26i 2680=com.sulake.habbo.communication.messages.outgoing.marketplace:BuyMarketplaceOfferMessageComposer
+com.sulake.habbo.communication:HabboMessages::_-26i 2813=com.sulake.habbo.communication.messages.outgoing.marketplace:MakeOfferMessageComposer
+com.sulake.habbo.communication:HabboMessages::_-26i 2913=com.sulake.habbo.communication.messages.outgoing.marketplace:GetMarketplaceOffersMessageComposer
+com.sulake.habbo.communication:HabboMessages::_-26i 3219=com.sulake.habbo.communication.messages.outgoing.marketplace:GetMarketplaceOwnOffersMessageComposer
+PLUS _composers com.sulake.habbo.communication.messages.outgoing.marketplace:CancelMarketplaceOfferMessageComposer=92
+PLUS _events com.sulake.habbo.communication.messages.incoming.marketplace:MarketplaceCancelOfferResultEvent=1704

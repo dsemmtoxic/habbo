@@ -1,0 +1,5 @@
+:HabboTabletMain	::HabboTabletMain
+:HabboUI3dCom	::HabboUI3dCom
+FilePrivateNS:HabboTabletMain:HabboCoreErrorReporter	FilePrivateNS:HabboTabletMain::HabboCoreErrorReporter
+_-0od:_-3UO	_-0od::_-3UO
+com.sulake.room.renderer:RoomSpriteCanvas3d	_-112::RoomSpriteCanvas3d

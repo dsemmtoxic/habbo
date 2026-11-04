@@ -1,0 +1,1 @@
+PASS: persisted :dc toggles from command/settings, updates native single-tap duration, and the actual single-tap entry uses one mobi while ignoring avatars. Off restores1500ms; enabled tap timeout250ms precedes native long press300ms, whose route has no automatic-use hook.

@@ -1,0 +1,121 @@
+
+
+code
+   getlocal0
+   pushscope
+   debug 1, "messenger", 0, 0
+   debug 1, "conversation", 1, 0
+   debug 1, "list", 2, 0
+   debug 1, "peer", 3, 1195
+   debug 1, "state", 4, 1196
+   getlocal2
+   pushnull
+   equals
+   dup
+   iftrue ofs0031
+   pop
+   getlocal3
+   pushnull
+   equals
+ofs0031:
+   iffalse ofs0036
+   returnvoid
+ofs0036:
+   findproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_messenger")
+   getlocal1
+   setproperty QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_messenger")
+   getlocal2
+   pushstring "_-3aV"
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   convert_i
+   convert_i
+   setlocal 4
+   getlocal 4
+   pushbyte 0
+   ifnle ofs0054
+   returnvoid
+ofs0054:
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleHistories")
+   getlocal 4
+   getproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   coerce QName(PackageNamespace(""),"Object")
+   setlocal 5
+   getlocal 5
+   pushnull
+   equals
+   not
+   dup
+   iffalse ofs0076
+   pop
+   getlocal 5
+   getproperty Multiname("conversation",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal2
+   strictequals
+   not
+ofs0076:
+   iffalse ofs008a
+   findpropstrict QName(PackageNamespace(""),"consoleConversationRemoved")
+   getlocal 4
+   callpropvoid QName(PackageNamespace(""),"consoleConversationRemoved"), 1
+   pushnull
+   coerce QName(PackageNamespace(""),"Object")
+   setlocal 5
+ofs008a:
+   getlocal 5
+   pushnull
+   ifne ofs00d6
+   pushstring "conversation"
+   getlocal2
+   pushstring "list"
+   getlocal3
+   pushstring "ids"
+   newarray 0
+   pushstring "cursor"
+   pushstring ""
+   pushstring "requested"
+   pushstring ""
+   pushstring "pending"
+   pushfalse
+   pushstring "loaded"
+   pushfalse
+   pushstring "more"
+   pushtrue
+   pushstring "last"
+   pushshort -5000
+   newobject 9
+   coerce QName(PackageNamespace(""),"Object")
+   setlocal 5
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleHistories")
+   getlocal 4
+   getlocal 5
+   setproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+ofs00d6:
+   getlocal 5
+   getlocal2
+   setproperty Multiname("conversation",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal 5
+   getlocal3
+   setproperty Multiname("list",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlex QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"_consoleViews")
+   getlocal3
+   getlocal 5
+   setproperty MultinameL([PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   getlocal3
+   pushstring "scroll"
+   getlex QName(PackageNamespace(""),"consoleHistoryScrolled")
+   callpropvoid Multiname("removeEventListener",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")]), 2
+   getlocal3
+   pushstring "scroll"
+   getlex QName(PackageNamespace(""),"consoleHistoryScrolled")
+   callpropvoid Multiname("addEventListener",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")]), 2
+   getlocal 5
+   getproperty Multiname("loaded",[PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("loginpatch"),PackageInternalNs("loginpatch"),PrivateNamespace("loginpatch:HabboTicketLogin"),ProtectedNamespace("loginpatch:HabboTicketLogin"),StaticProtectedNs("loginpatch:HabboTicketLogin"),PrivateNamespace("HabboTicketLogin.as$4144")])
+   not
+   iffalse ofs0121
+   findpropstrict QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"requestConsoleHistory")
+   getlocal 4
+   getlocal 5
+   callpropvoid QName(PrivateNamespace("loginpatch:HabboTicketLogin"),"requestConsoleHistory"), 2
+ofs0121:
+   returnvoid
+end ; code

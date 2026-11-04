@@ -1,0 +1,19 @@
+Retained70 methods: 37967
+
+Changed methods:
+com.sulake.habbo.ui:RoomDesktop|I1:_-0KM
+com.sulake.habbo.ui:RoomDesktop|I1:_-N2
+com.sulake.habbo.ui:RoomDesktop|I1:_-kG
+com.sulake.habbo.widgets.furni.present:PresentCtrl|I1:_-3qY
+loginpatch:ClientSettings63|S1:beforeCommand
+loginpatch:RoomUse70|S1:present
+loginpatch:RoomUse70|S1:singleTap
+loginpatch:Text68|initializer
+
+Added methods:
+com.sulake.habbo.ui:RoomDesktop|I1:showPresent71
+loginpatch:Ping69|S1:notice
+loginpatch:RoomUse70|S1:giftMap
+loginpatch:RoomUse70|S1:presentEvent
+loginpatch:RoomUse70|S1:presentRequest
+loginpatch:RoomUse70|S1:presentSelection

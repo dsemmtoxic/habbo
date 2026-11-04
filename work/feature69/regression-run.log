@@ -1,0 +1,23 @@
+PASS audit
+PASS avatars
+PASS browser-script
+PASS colorBindings
+PASS console
+PASS entrance-sorting
+PASS lighting
+PASS lighting-reference
+PASS localization
+PASS login
+PASS logout
+PASS market
+PASS mask
+PASS mesh
+PASS native-2760-class-roundtrip
+PASS navigator
+PASS ping
+PASS promotions
+PASS render
+PASS retained33
+PASS settings
+PASS startup-types
+PASS: 22 focused/regression checks verified against saved report and current SWF; physical Android and live hotel remain pending.

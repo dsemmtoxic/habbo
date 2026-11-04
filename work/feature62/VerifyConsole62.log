@@ -1,0 +1,4 @@
+PASS: actual message constructors preserve raw Unicode; local dates for sent/received messages, previous day and9h later are stable; unavailable dates not fabricated.
+PASS: Real AirPlus history schema/request parity, pre-login sent/received messages, live/history ID deduplication, cursor pagination, empty termination, unread-state preservation and stable scroll position.
+PASS: actual history reader/cursors fill a short viewport, cap prefetch to2, forbid overlap, terminate on empty page, retry initial timeout once, release timers on close/reset; original sender/dedup/unread/scroll/schema regression passed.
+PASS: console dates, original text, pagination/cursors, deduplication, unread state, scrolling and bounded retry preserved in62.

@@ -1,0 +1,35 @@
+Retained68 methods: 37868
+
+Changed methods:
+com.sulake.core.communication.messages:MessageClassManager|I1:_-2aE
+com.sulake.habbo.room:RoomObjectEventHandler|I1:_-1bd
+com.sulake.habbo.tablet.catalog.marketplace:MarketPlaceOffersView|I1:_-qu
+com.sulake.habbo.tablet.catalog.marketplace:MarketPlaceOffersView|I1:dispose
+com.sulake.habbo.tablet.navigator:RoomDetailsView|initializer
+com.sulake.habbo.tracking:LatencyTracker|I1:onPingResponse
+com.sulake.habbo.widgets.actions:PeerActionsCtrl|I1:_-0G7
+com.sulake.habbo.widgets.actions:PeerActionsCtrl|I1:_-0wY
+com.sulake.room.renderer:RoomTouchHandler|I1:_-01v
+com.sulake.room.renderer:RoomTouchHandler|I1:_-1Hy
+loginpatch:HabboTicketLogin|S1:resetAccountState
+loginpatch:HabboTicketLogin|S1:runCommand
+loginpatch:Market68|S1:bind
+loginpatch:Market68|S1:describe
+loginpatch:Market68|S1:disposeLogic
+loginpatch:Market68|S1:filter
+loginpatch:Market68|S1:request
+loginpatch:Market68|S1:result
+loginpatch:Market68|S1:tick
+loginpatch:Market68|initializer
+loginpatch:RoomUI68|S1:details
+loginpatch:RoomUI68|S1:refresh
+loginpatch:RoomUI68|S1:remaining
+loginpatch:Text68|initializer
+
+Added methods:
+com.sulake.habbo.tablet.catalog.marketplace:MarketPlaceLogic|I1:marketCount69
+loginpatch:Market68|S1:active
+loginpatch:Market68|S1:releaseView
+loginpatch:Market68|S1:viewTick
+loginpatch:RoomUI68|S1:line
+loginpatch:RoomUI68|S1:unit

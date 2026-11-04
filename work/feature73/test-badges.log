@@ -1,0 +1,1 @@
+PASS: own profile sends a single verified GetBadges query; native parser assembles out-of-order fragments. Native selection saves five slots before synchronous popup close. Touches on child artwork use the actual slot, drags do not open, loading timeout permits retry, other profiles remain read-only, and reset releases listeners.
